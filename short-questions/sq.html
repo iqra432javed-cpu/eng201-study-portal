@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>50 Short Questions | ENG-201</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .toolbar {
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .toolbar .btn-sm {
+      padding: .5rem 1rem; border-radius: var(--radius);
+      font-size: .8rem; font-weight: 600;
+      border: 1.5px solid var(--navy); color: var(--navy); background: transparent;
+      cursor: pointer; transition: var(--transition);
+    }
+    .toolbar .btn-sm:hover { background: var(--navy); color: var(--white); }
+    .show-answer-btn {
+      background: var(--navy); color: var(--gold);
+      border: none; padding: .4rem .9rem; border-radius: var(--radius);
+      font-size: .78rem; font-weight: 600; cursor: pointer;
+      transition: var(--transition);
+    }
+    .show-answer-btn:hover { background: var(--navy-light); }
+    .filter-chips { display: flex; gap: .4rem; flex-wrap: wrap; }
+    .chip {
+      padding: .35rem .8rem; border-radius: 999px;
+      font-size: .76rem; font-weight: 600; cursor: pointer;
+      border: 1.5px solid var(--parchment-dark); color: var(--ink-mid);
+      transition: var(--transition); background: var(--white);
+    }
+    .chip:hover, .chip.active { border-color: var(--gold); background: rgba(201,168,76,.1); color: #7A5C10; }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-brand">ENG-201 <span>Fictional &amp; Non-fictional Narrative</span></div>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../chapters/chapter1.html">Notes</a></li>
+    <li><a href="sq.html" class="active">Short Q</a></li>
+    <li><a href="../long-questions/lq.html">Long Q</a></li>
+    <li><a href="../mcqs/mcqs.html">MCQs</a></li>
+  </ul>
+  <div class="nav-toggle"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="breadcrumb">
+  <a href="../index.html">Home</a><span class="sep">/</span><span class="current">Short Questions</span>
+</div>
+
+<div class="page-header">
+  <p class="eyebrow">5 Marks Each · 50 Questions</p>
+  <h1>Most Important Short Questions</h1>
+  <p>Examiner-favourite short questions with concise, exam-ready model answers</p>
+</div>
+
+<div class="container">
+  <div class="page-body">
+
+    <div class="toolbar">
+      <div class="filter-chips" id="filterChips">
+        <span class="chip active" data-filter="all">All Topics</span>
+        <span class="chip" data-filter="theory">Theory</span>
+        <span class="chip" data-filter="novel">Novels</span>
+        <span class="chip" data-filter="story">Short Stories</span>
+        <span class="chip" data-filter="essay">Essays</span>
+      </div>
+      <button class="btn-sm" onclick="toggleAllAnswers()">▼ Expand All Answers</button>
+    </div>
+
+    <div id="qList">
+
+      <!-- Q1 -->
+      <div class="question-block" data-cat="theory">
+        <span class="question-number">01</span>
+        <span class="marks-tag">5 Marks</span>
+        <h3>Q1. Define fictional narrative and give two of its forms.</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p>A fictional narrative is an imaginative account of events and characters created by the author's imagination, aiming to entertain and explore human experience through invented stories. Two forms are the <strong>novel</strong> (long, complex prose narrative) and the <strong>short story</strong> (brief, compressed prose narrative focused on a single event or character).</p>
+        </div>
+      </div>
+
+      <!-- Q2 -->
+      <div class="question-block" data-cat="theory">
+        <span class="question-number">02</span>
+        <span class="marks-tag">5 Marks</span>
+        <h3>Q2. What is a non-fictional narrative? Name three forms.</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p>A non-fictional narrative deals with real events, people, and verifiable facts, written to inform, argue, or reflect rather than to invent. Three forms include the <strong>essay</strong>, <strong>biography/autobiography</strong>, and the <strong>travelogue</strong>.</p>
+        </div>
+      </div>
+
+      <!-- Q3 -->
+      <div class="question-block" data-cat="theory">
+        <span class="question-number">03</span>
+        <span class="marks-tag">5 Marks</span>
+        <h3>Q3. Differentiate between a novel and a novella.</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p>A novel is a long prose fiction (usually 40,000+ words) with complex plots and multiple characters. A novella is shorter (15,000–40,000 words), occupying a middle ground between the short story and novel, with focused but slightly more developed plot and character than a short story allows.</p>
+        </div>
+      </div>
+
+      <!-- Q4 -->
+      <div class="question-block" data-cat="theory">
+        <span class="question-number">04</span>
+        <span class="marks-tag">5 Marks</span>
+        <h3>Q4. What is plot structure? Briefly explain Freytag's Pyramid.</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p>Plot is the structured sequence of events in a narrative. Freytag's Pyramid divides plot into five stages: <strong>Exposition</strong> (introduction), <strong>Rising Action</strong> (building conflict), <strong>Climax</strong> (turning point), <strong>Falling Action</strong> (consequences), and <strong>Denouement</strong> (resolution).</p>
+        </div>
+      </div>
+
+      <!-- Q5 -->
+      <div class="question-block" data-cat="theory">
+        <span class="question-number">05</span>
+        <span class="marks-tag">5 Marks</span>
+        <h3>Q5. What is meant by point of view (POV) in fiction?</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p>Point of view is the narrative perspective or vantage point from which a story is told — first person, second person, third person limited, or third person omniscient — and it shapes what information the reader receives and how they interpret events.</p>
+        </div>
+      </div>
+
+      <!-- Q6 -->
+      <div class="question-block" data-cat="theory">
+        <span class="question-number">06</span>
+        <span class="marks-tag">5 Marks</span>
+        <h3>Q6. Distinguish between tone and mood.</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p>Tone is the author's attitude toward the subject matter, expressed through word choice and style. Mood is the emotional atmosphere the reader feels while reading. Tone comes from the writer; mood is experienced by the reader.</p>
+        </div>
+      </div>
+
+      <!-- Q7 -->
+      <div class="question-block" data-cat="theory">
+        <span class="question-number">07</span>
+        <span class="marks-tag">5 Marks</span>
+        <h3>Q7. What is an unreliable narrator? Give an example.</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p>An unreliable narrator is one whose credibility is compromised — due to bias, limited knowledge, mental state, or deliberate deception — causing the reader to question the truth of the account. Daru in <em>Moth Smoke</em> is an example, as his first-person narration is self-justifying and unreliable.</p>
+        </div>
+      </div>
+
+      <!-- Q8 -->
+      <div class="question-block" data-cat="theory">
+        <span class="question-number">08</span>
+        <span class="marks-tag">5 Marks</span>
+        <h3>Q8. Define the epistolary novel.</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p>An epistolary novel is told entirely through a series of documents, typically letters, diary entries, or correspondence, lending the narrative a sense of authenticity and immediacy. Example: <em>Frankenstein</em> by Mary Shelley.</p>
+        </div>
+      </div>
+
+      <!-- Q9 -->
+      <div class="question-block" data-cat="theory">
+        <span class="question-number">09</span>
+        <span class="marks-tag">5 Marks</span>
+        <h3>Q9. What is a picaresque novel?</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p>A picaresque novel follows the episodic adventures of a roguish, low-born hero (picaro) as he moves through different social classes, often used to satirise society. It originated in Spanish literary tradition.</p>
+        </div>
+      </div>
+
+      <!-- Q10 -->
+      <div class="question-block" data-cat="theory">
+        <span class="question-number">10</span>
+        <span class="marks-tag">5 Marks</span>
+        <h3>Q10. Define Bildungsroman with an example.</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p>Bildungsroman, meaning "novel of formation," traces the psychological, moral, and social development of a protagonist from youth to maturity. Example: <em>Great Expectations</em> by Charles Dickens.</p>
+        </div>
+      </div>
+
+      <!-- Q11 -->
+      <div class="question-block" data-cat="theory">
+        <span class="question-number">11</span>
+        <span class="marks-tag">5 Marks</span>
+        <h3>Q11. What characterises a Gothic novel?</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p>A Gothic novel combines horror, mystery, and supernatural elements with psychological terror, typically set in decaying mansions or castles with a brooding, atmospheric tone. Example: "The Fall of the House of Usher" by Poe.</p>
+        </div>
+      </div>
+
+      <!-- Q12 -->
+      <div class="question-block" data-cat="theory">
+        <span class="question-number">12</span>
+        <span class="marks-tag">5 Marks</span>
+        <h3>Q12. What is meant by the postmodern novel?</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p>The postmodern novel is self-referential and metafictional, challenging the notion of a single stable truth through irony, fragmentation, multiple narrators, and intertextuality. <em>Moth Smoke</em> by Mohsin Hamid is a key example studied in this course.</p>
+        </div>
+      </div>
+
+      <!-- Q13 -->
+      <div class="question-block" data-cat="theory">
+        <span class="question-number">13</span>
+        <span class="marks-tag">5 Marks</span>
+        <h3>Q13. What is a novel of manners?</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p>A novel of manners focuses on the customs, behaviours, and values of a particular social class, often with a satirical edge highlighting social hypocrisy. Example: <em>Pride and Prejudice</em> by Jane Austen.</p>
+        </div>
+      </div>
+
+      <!-- Q14 -->
+      <div class="question-block" data-cat="theory">
+        <span class="question-number">14</span>
+        <span class="marks-tag">5 Marks</span>
+        <h3>Q14. Distinguish between memoir and autobiography.</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p>An autobiography covers the author's entire life chronologically, while a memoir is more selective, focusing on a specific period, theme, or set of experiences from the author's life, often with greater emotional or thematic focus.</p>
+        </div>
+      </div>
+
+      <!-- Q15 -->
+      <div class="question-block" data-cat="theory">
+        <span class="question-number">15</span>
+        <span class="marks-tag">5 Marks</span>
+        <h3>Q15. What is creative non-fiction?</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p>Creative non-fiction applies literary techniques such as imagery, narrative structure, and metaphor to factual writing, blurring the line between fiction and non-fiction while remaining grounded in real events.</p>
+        </div>
+      </div>
+
+      <!-- Q16 -->
+      <div class="question-block" data-cat="novel">
+        <span class="question-number">16</span>
+        <span class="marks-tag">5 Marks</span>
+        <h3>Q16. What does the conch shell symbolise in Lord of the Flies?</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p>The conch shell symbolises civilised order, democratic authority, and legitimate leadership. Whoever holds it has the right to speak; its destruction near the novel's end marks the final collapse of order into savagery.</p>
+        </div>
+      </div>
+
+      <!-- Q17 -->
+      <div class="question-block" data-cat="novel">
+        <span class="question-number">17</span>
+        <span class="marks-tag">5 Marks</span>
+        <h3>Q17. Who is Piggy and what does he represent in Lord of the Flies?</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p>Piggy is an overweight, asthmatic boy who represents reason, intellect, and scientific thinking. Despite his valuable insight, he is mocked and marginalised, and his eventual death symbolises the destruction of rational order on the island.</p>
+        </div>
+      </div>
+
+      <!-- Q18 -->
+      <div class="question-block" data-cat="novel">
+        <span class="question-number">18</span>
+        <span class="marks-tag">5 Marks</span>
+        <h3>Q18. What is the central theme of Lord of the Flies?</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p>The central theme is the conflict between civilisation and savagery — the novel argues that evil is innate within all human beings, not a product of external circumstances, and that the thin veneer of social order can collapse rapidly without structure.</p>
+        </div>
+      </div>
+
+      <!-- Q19 -->
+      <div class="question-block" data-cat="novel">
+        <span class="question-number">19</span>
+        <span class="marks-tag">5 Marks</span>
+        <h3>Q19. Describe the character of Jack Merridew.</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p>Jack is the antagonist of the novel, representing savagery, the desire for power, and submission to primal instinct. His transformation from a choirboy into a tribal hunter-leader charts the novel's descent from order into violent chaos.</p>
+        </div>
+      </div>
+
+      <!-- Q20 -->
+      <div class="question-block" data-cat="novel">
+        <span class="question-number">20</span>
+        <span class="marks-tag">5 Marks</span>
+        <h3>Q20. What is the significance of Simon's death in Lord of the Flies?</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p>Simon, who represents spiritual insight and natural goodness, is killed by the other boys in a frenzied, ritualistic mob attack after he tries to reveal the truth about the "beast." His death symbolises the destruction of innocence and truth by collective savagery.</p>
+        </div>
+      </div>
+
+      <!-- Q21 -->
+      <div class="question-block" data-cat="novel">
+        <span class="question-number">21</span>
+        <span class="marks-tag">5 Marks</span>
+        <h3>Q21. Who is Daru Shezad in Moth Smoke?</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p>Daru Shezad is the protagonist, a Lahore-based banker who loses his job and gradually descends into drug addiction, poverty, and crime, while engaging in a destructive affair with his best friend's wife, Mumtaz.</p>
+        </div>
+      </div>
+
+      <!-- Q22 -->
+      <div class="question-block" data-cat="novel">
+        <span class="question-number">22</span>
+        <span class="marks-tag">5 Marks</span>
+        <h3>Q22. What does the title "Moth Smoke" symbolise?</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p>The title evokes the image of a moth drawn fatally to a flame — symbolising how Daru is drawn to the elite, wealthy lifestyle he cannot sustainably belong to, ultimately being destroyed by his pursuit of it.</p>
+        </div>
+      </div>
+
+      <!-- Q23 -->
+      <div class="question-block" data-cat="novel">
+        <span class="question-number">23</span>
+        <span class="marks-tag">5 Marks</span>
+        <h3>Q23. How does Mohsin Hamid use narrative structure in Moth Smoke?</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p>Hamid uses a multi-voiced, postmodern structure where different characters narrate alternating chapters, framed as testimonies in Daru's trial. This fragmented structure creates ambiguity about truth and responsibility.</p>
+        </div>
+      </div>
+
+      <!-- Q24 -->
+      <div class="question-block" data-cat="novel">
+        <span class="question-number">24</span>
+        <span class="marks-tag">5 Marks</span>
+        <h3>Q24. What social commentary does Moth Smoke offer on Pakistani society?</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p>The novel critiques deep class inequality, elite corruption and impunity, and a national identity crisis set against the backdrop of Pakistan's 1998 nuclear tests, showing how privilege shields the wealthy while ordinary people like Daru bear the consequences of a corrupt system.</p>
+        </div>
+      </div>
+
+      <!-- Q25 -->
+      <div class="question-block" data-cat="novel">
+        <span class="question-number">25</span>
+        <span class="marks-tag">5 Marks</span>
+        <h3>Q25. Compare the characters of Daru and Ozi in Moth Smoke.</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p>Daru is a once-promising middle-class man who falls into ruin once he loses institutional support, while Ozi, born into wealth and privilege, commits equally corrupt acts but remains protected and unpunished — illustrating the novel's theme of class-based impunity.</p>
+        </div>
+      </div>
+
+      <!-- Q26 -->
+      <div class="question-block" data-cat="story">
+        <span class="question-number">26</span>
+        <span class="marks-tag">5 Marks</span>
+        <h3>Q26. What is the central irony in "Story of an Hour"?</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p>The central irony is that Louise Mallard, believed to be grieving her husband's death, is actually experiencing liberation and joy at the thought of freedom; when her husband returns alive, she dies — ironically not of joy, as the doctors assume, but from the shock of losing her newfound freedom.</p>
+        </div>
+      </div>
+
+      <!-- Q27 -->
+      <div class="question-block" data-cat="story">
+        <span class="question-number">27</span>
+        <span class="marks-tag">5 Marks</span>
+        <h3>Q27. What theme does Kate Chopin explore through Louise Mallard?</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p>Chopin explores the theme of female oppression within marriage and the longing for personal freedom and self-ownership, critiquing the social constraints placed on women in the late 19th century.</p>
+        </div>
+      </div>
+
+      <!-- Q28 -->
+      <div class="question-block" data-cat="story">
+        <span class="question-number">28</span>
+        <span class="marks-tag">5 Marks</span>
+        <h3>Q28. What Gothic elements appear in "The Fall of the House of Usher"?</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p>The story features a decaying mansion, mysterious illness, premature burial, an atmosphere of dread, and a supernatural coincidence between the house's collapse and the deaths of the Usher twins — all hallmark Gothic elements.</p>
+        </div>
+      </div>
+
+      <!-- Q29 -->
+      <div class="question-block" data-cat="story">
+        <span class="question-number">29</span>
+        <span class="marks-tag">5 Marks</span>
+        <h3>Q29. How does the house function as a symbol in "The Fall of the House of Usher"?</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p>The house mirrors Roderick Usher's deteriorating mental state — both the family lineage and the physical structure are cracking apart, and the house's final collapse occurs simultaneously with the deaths of Roderick and Madeline.</p>
+        </div>
+      </div>
+
+      <!-- Q30 -->
+      <div class="question-block" data-cat="story">
+        <span class="question-number">30</span>
+        <span class="marks-tag">5 Marks</span>
+        <h3>Q30. What is the twist ending of "The Necklace" and its significance?</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p>After ten years of poverty spent replacing what she believed was a lost diamond necklace, Mathilde learns the original necklace was actually fake. The twist illustrates situational irony and critiques vanity, pride, and the destructive pursuit of appearances.</p>
+        </div>
+      </div>
+
+      <!-- Q31 -->
+      <div class="question-block" data-cat="story">
+        <span class="question-number">31</span>
+        <span class="marks-tag">5 Marks</span>
+        <h3>Q31. What does Mathilde Loisel represent in "The Necklace"?</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p>Mathilde represents the dangers of vanity and dissatisfaction with one's social position; her obsession with appearing wealthy leads directly to the very poverty she always feared.</p>
+        </div>
+      </div>
+
+      <!-- Q32 -->
+      <div class="question-block" data-cat="story">
+        <span class="question-number">32</span>
+        <span class="marks-tag">5 Marks</span>
+        <h3>Q32. Explain Hemingway's "Iceberg Theory" with reference to "Cat in the Rain."</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p>The Iceberg Theory holds that a story's deeper meaning should remain submerged beneath a simple surface narrative. In "Cat in the Rain," Hemingway never explicitly states the wife's emotional dissatisfaction; it is implied through her longing for the cat, symbolising her unmet desire for nurturing, identity, and home.</p>
+        </div>
+      </div>
+
+      <!-- Q33 -->
+      <div class="question-block" data-cat="story">
+        <span class="question-number">33</span>
+        <span class="marks-tag">5 Marks</span>
+        <h3>Q33. What does the cat symbolise in "Cat in the Rain"?</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p>The cat symbolises the wife's unfulfilled desire for nurturing, domesticity, and emotional connection — needs her husband fails to acknowledge or fulfil, highlighting the alienation within their marriage.</p>
+        </div>
+      </div>
+
+      <!-- Q34 -->
+      <div class="question-block" data-cat="story">
+        <span class="question-number">34</span>
+        <span class="marks-tag">5 Marks</span>
+        <h3>Q34. What is a Joycean epiphany? Explain with reference to "Araby."</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p>A Joycean epiphany is a sudden moment of spiritual or psychological insight experienced by a character. In "Araby," the boy's epiphany occurs at the bazaar when he realises the vanity and falseness of his romantic infatuation, leading to anguish and self-recognition.</p>
+        </div>
+      </div>
+
+      <!-- Q35 -->
+      <div class="question-block" data-cat="story">
+        <span class="question-number">35</span>
+        <span class="marks-tag">5 Marks</span>
+        <h3>Q35. What is the central theme of "Araby"?</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p>The central theme is the loss of innocence and the painful gap between romantic idealism and disappointing reality, set against the backdrop of a dull, paralysed colonial Dublin.</p>
+        </div>
+      </div>
+
+      <!-- Q36 -->
+      <div class="question-block" data-cat="essay">
+        <span class="question-number">36</span>
+        <span class="marks-tag">5 Marks</span>
+        <h3>Q36. What is Bacon's view on marriage in "Of Marriage and Single Life"?</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p>Bacon argues that married men make better citizens and subjects but are less free to pursue great public enterprises, since wife and children become "hostages to fortune" that limit risk-taking and ambition.</p>
+        </div>
+      </div>
+
+      <!-- Q37 -->
+      <div class="question-block" data-cat="essay">
+        <span class="question-number">37</span>
+        <span class="marks-tag">5 Marks</span>
+        <h3>Q37. Describe the prose style of Francis Bacon in his essays.</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p>Bacon's style is aphoristic, dense, and Latinate, composed of short, epigrammatic sentences that pack maximum meaning into minimal words. His tone is impersonal and purely argumentative rather than confessional.</p>
+        </div>
+      </div>
+
+      <!-- Q38 -->
+      <div class="question-block" data-cat="essay">
+        <span class="question-number">38</span>
+        <span class="marks-tag">5 Marks</span>
+        <h3>Q38. What is the central argument of Russell's "A Free Man's Worship"?</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p>Russell argues that although the universe is indifferent and without inherent purpose, human beings can achieve dignity and meaning by freely choosing to value goodness, beauty, and truth, rather than worshipping power.</p>
+        </div>
+      </div>
+
+      <!-- Q39 -->
+      <div class="question-block" data-cat="essay">
+        <span class="question-number">39</span>
+        <span class="marks-tag">5 Marks</span>
+        <h3>Q39. Why does the narrator shoot the elephant in Orwell's essay despite knowing it is wrong?</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p>The narrator shoots the elephant to avoid appearing weak or foolish before the watching Burmese crowd, illustrating how colonial power forces the oppressor to act against his own conscience to maintain an illusion of authority.</p>
+        </div>
+      </div>
+
+      <!-- Q40 -->
+      <div class="question-block" data-cat="essay">
+        <span class="question-number">40</span>
+        <span class="marks-tag">5 Marks</span>
+        <h3>Q40. What does "Shooting an Elephant" reveal about imperialism?</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p>The essay reveals that imperialism corrupts both the colonised and the coloniser; the officer becomes a puppet of the very people he supposedly rules, sacrificing his moral agency to preserve the colonial image of unwavering authority.</p>
+        </div>
+      </div>
+
+      <!-- Q41 -->
+      <div class="question-block" data-cat="essay">
+        <span class="question-number">41</span>
+        <span class="marks-tag">5 Marks</span>
+        <h3>Q41. Explain Orwell's prose style with reference to the essay.</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p>Orwell's style is plain, direct, and vivid, using concrete imagery and simple diction. The essay adopts a confessional, self-critical first-person mode that exposes his own moral failure honestly.</p>
+        </div>
+      </div>
+
+      <!-- Q42 -->
+      <div class="question-block" data-cat="essay">
+        <span class="question-number">42</span>
+        <span class="marks-tag">5 Marks</span>
+        <h3>Q42. What is Mill's "harm principle" in "On Liberty"?</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p>Mill's harm principle states that the only legitimate reason to restrict an individual's freedom of action is to prevent harm to others; a person's own good, physical or moral, is not sufficient justification for interference.</p>
+        </div>
+      </div>
+
+      <!-- Q43 -->
+      <div class="question-block" data-cat="essay">
+        <span class="question-number">43</span>
+        <span class="marks-tag">5 Marks</span>
+        <h3>Q43. What does Mill mean by "tyranny of the majority"?</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p>Mill argues that social pressure and public opinion can suppress individual freedom just as severely as government tyranny, since society can enforce conformity through custom and disapproval rather than law.</p>
+        </div>
+      </div>
+
+      <!-- Q44 -->
+      <div class="question-block" data-cat="essay">
+        <span class="question-number">44</span>
+        <span class="marks-tag">5 Marks</span>
+        <h3>Q44. What is Sontag's main argument in "Illness as Metaphor"?</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p>Sontag argues that society wrongly uses metaphor (such as describing cancer as a "battle" or illness as a moral punishment) to interpret disease, and that these metaphors stigmatise patients; illness should instead be understood as a purely physical condition.</p>
+        </div>
+      </div>
+
+      <!-- Q45 -->
+      <div class="question-block" data-cat="essay">
+        <span class="question-number">45</span>
+        <span class="marks-tag">5 Marks</span>
+        <h3>Q45. Why does Sontag object to military metaphors for illness?</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p>Sontag objects because military metaphors ("battling," "fighting," "losing the fight") imply that the patient is responsible for the outcome, creating unnecessary guilt and shifting focus from medical reality to a false narrative of personal weakness or failure.</p>
+        </div>
+      </div>
+
+      <!-- Q46 -->
+      <div class="question-block" data-cat="theory">
+        <span class="question-number">46</span>
+        <span class="marks-tag">5 Marks</span>
+        <h3>Q46. What is the difference between a flat and a round character?</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p>A flat character is one-dimensional and predictable, often representing a single trait or type. A round character is complex and multi-dimensional, capable of growth, contradiction, and surprising the reader — as Daru is in <em>Moth Smoke</em>.</p>
+        </div>
+      </div>
+
+      <!-- Q47 -->
+      <div class="question-block" data-cat="theory">
+        <span class="question-number">47</span>
+        <span class="marks-tag">5 Marks</span>
+        <h3>Q47. Differentiate between direct and indirect characterisation.</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p>Direct (explicit) characterisation occurs when the author directly states a character's traits. Indirect (dramatic) characterisation reveals character through actions, dialogue, thoughts, and the reactions of other characters, requiring the reader to infer traits.</p>
+        </div>
+      </div>
+
+      <!-- Q48 -->
+      <div class="question-block" data-cat="theory">
+        <span class="question-number">48</span>
+        <span class="marks-tag">5 Marks</span>
+        <h3>Q48. What is meant by "setting" in a narrative and what functions does it serve?</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p>Setting refers to the time, place, and social environment of a story. It functions to establish atmosphere and context, reflect characters' psychological states, and often reinforces the narrative's central themes.</p>
+        </div>
+      </div>
+
+      <!-- Q49 -->
+      <div class="question-block" data-cat="theory">
+        <span class="question-number">49</span>
+        <span class="marks-tag">5 Marks</span>
+        <h3>Q49. What is third-person omniscient point of view? Give an example from the course.</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p>Third-person omniscient POV is a narration style where the narrator stands outside the story but has complete access to all characters' thoughts, feelings, and motivations. <em>Lord of the Flies</em> is narrated in this mode, allowing Golding to control dramatic irony.</p>
+        </div>
+      </div>
+
+      <!-- Q50 -->
+      <div class="question-block" data-cat="theory">
+        <span class="question-number">50</span>
+        <span class="marks-tag">5 Marks</span>
+        <h3>Q50. What distinguishes a graphic novel from a traditional novel?</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p>A graphic novel tells its narrative through sequential art combined with text, relying on visual storytelling alongside dialogue and captions, whereas a traditional novel is conveyed entirely through prose. Example: <em>Maus</em> by Art Spiegelman.</p>
+        </div>
+      </div>
+
+    </div><!-- /qList -->
+  </div>
+</div>
+
+<footer class="site-footer">
+  <strong>ENG-201 Study Portal</strong> · 50 Most Important Short Questions · 5 Marks Each
+</footer>
+
+<script src="../js/main.js"></script>
+<script>
+  // Filter chips
+  document.querySelectorAll('.chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+      const filter = chip.dataset.filter;
+      document.querySelectorAll('.question-block').forEach(block => {
+        block.style.display = (filter === 'all' || block.dataset.cat === filter) ? '' : 'none';
+      });
+    });
+  });
+
+  // Expand/collapse all
+  let allExpanded = false;
+  function toggleAllAnswers() {
+    allExpanded = !allExpanded;
+    document.querySelectorAll('.answer-content').forEach(ans => {
+      ans.style.display = allExpanded ? 'block' : 'none';
+    });
+    document.querySelectorAll('.show-answer-btn').forEach(btn => {
+      btn.textContent = allExpanded ? '▼ Hide Answer' : '▶ Show Answer';
+    });
+    event.target.textContent = allExpanded ? '▲ Collapse All Answers' : '▼ Expand All Answers';
+  }
+</script>
+</body>
+</html>
