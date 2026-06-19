@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>20 Long Questions | ENG-201</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .toolbar {
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;
+    }
+    .btn-sm {
+      padding: .5rem 1rem; border-radius: var(--radius);
+      font-size: .8rem; font-weight: 600;
+      border: 1.5px solid var(--navy); color: var(--navy); background: transparent;
+      cursor: pointer; transition: var(--transition);
+    }
+    .btn-sm:hover { background: var(--navy); color: var(--white); }
+    .show-answer-btn {
+      background: var(--navy); color: var(--gold);
+      border: none; padding: .4rem .9rem; border-radius: var(--radius);
+      font-size: .78rem; font-weight: 600; cursor: pointer; transition: var(--transition);
+    }
+    .show-answer-btn:hover { background: var(--navy-light); }
+    .filter-chips { display: flex; gap: .4rem; flex-wrap: wrap; }
+    .chip {
+      padding: .35rem .8rem; border-radius: 999px; font-size: .76rem; font-weight: 600;
+      cursor: pointer; border: 1.5px solid var(--parchment-dark); color: var(--ink-mid);
+      transition: var(--transition); background: var(--white);
+    }
+    .chip:hover, .chip.active { border-color: var(--gold); background: rgba(201,168,76,.1); color: #7A5C10; }
+
+    .outline-pts {
+      list-style: none; padding: 0; margin: .5rem 0 1rem;
+    }
+    .outline-pts li {
+      padding: .4rem .75rem;
+      background: var(--parchment);
+      border-radius: var(--radius);
+      margin-bottom: .4rem;
+      font-size: .88rem;
+      color: var(--ink-mid);
+      border-left: 3px solid var(--gold);
+    }
+    .answer-heading {
+      font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+      color: var(--navy-light); margin: 1rem 0 .4rem;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-brand">ENG-201 <span>Fictional &amp; Non-fictional Narrative</span></div>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../chapters/chapter1.html">Notes</a></li>
+    <li><a href="../short-questions/sq.html">Short Q</a></li>
+    <li><a href="lq.html" class="active">Long Q</a></li>
+    <li><a href="../mcqs/mcqs.html">MCQs</a></li>
+  </ul>
+  <div class="nav-toggle"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="breadcrumb">
+  <a href="../index.html">Home</a><span class="sep">/</span><span class="current">Long Questions</span>
+</div>
+
+<div class="page-header">
+  <p class="eyebrow">10 Marks Each · 20 Questions</p>
+  <h1>Most Important Long Questions</h1>
+  <p>Full essay-style outlines covering every prescribed text and major theoretical concept</p>
+</div>
+
+<div class="container">
+  <div class="page-body">
+
+    <div class="toolbar">
+      <div class="filter-chips" id="filterChips">
+        <span class="chip active" data-filter="all">All Topics</span>
+        <span class="chip" data-filter="theory">Theory</span>
+        <span class="chip" data-filter="novel">Novels</span>
+        <span class="chip" data-filter="story">Short Stories</span>
+        <span class="chip" data-filter="essay">Essays</span>
+      </div>
+      <button class="btn-sm" onclick="toggleAllAnswers()">▼ Expand All Answers</button>
+    </div>
+
+    <div id="qList">
+
+      <!-- LQ1 -->
+      <div class="question-block" data-cat="theory">
+        <span class="question-number">01</span>
+        <span class="marks-tag">10 Marks</span>
+        <h3>Q1. Define fictional and non-fictional narrative. Discuss in detail the key distinctions between them with examples.</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p class="answer-heading">Outline</p>
+          <ul class="outline-pts">
+            <li>Definition of fictional narrative + purpose (entertainment, exploration of human experience)</li>
+            <li>Definition of non-fictional narrative + purpose (inform, argue, record)</li>
+            <li>Point-by-point distinction: factual basis, authorial responsibility, forms</li>
+            <li>Blurred boundary: creative non-fiction and autofiction</li>
+            <li>Examples from both categories (novel/short story vs essay/biography)</li>
+          </ul>
+          <p class="answer-heading">Model Answer</p>
+          <p>Fictional narrative is an imaginative account created from the author's imagination, encompassing forms such as the novel, novella, and short story, with the primary purpose of artistic expression and exploration of the human condition. Non-fictional narrative, by contrast, recounts real, verifiable events and people, encompassing forms such as the essay, biography, autobiography, travelogue, and memoir, with the primary purpose of informing or reflecting on real experience.</p>
+          <p>The key distinctions are: (1) factual basis — fiction is invented while non-fiction is verifiable; (2) authorial responsibility — non-fiction writers are accountable for accuracy while fiction writers have creative license; (3) purpose — fiction prioritises artistic and emotional engagement while non-fiction prioritises truth and information. However, this boundary is not absolute. Creative non-fiction, such as Susan Sontag's essays, borrows literary techniques from fiction, while autofiction blends autobiography with invented elements, showing that the two categories exist on a spectrum rather than as a strict binary.</p>
+        </div>
+      </div>
+
+      <!-- LQ2 -->
+      <div class="question-block" data-cat="theory">
+        <span class="question-number">02</span>
+        <span class="marks-tag">10 Marks</span>
+        <h3>Q2. Discuss in detail the major genres of the novel covered in this course, with at least one example for each.</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p class="answer-heading">Outline</p>
+          <ul class="outline-pts">
+            <li>Epistolary Novel — definition + example</li>
+            <li>Picaresque Novel — definition + example</li>
+            <li>Bildungsroman / Coming-of-age — definition + example</li>
+            <li>Historical Novel, Novel of Manners, Gothic Novel</li>
+            <li>Realistic, Modern, Postmodern, Graphic Novel — with course examples</li>
+            <li>Conclusion: genres often overlap (e.g., Moth Smoke as postmodern + noir)</li>
+          </ul>
+          <p class="answer-heading">Model Answer</p>
+          <p>The novel has evolved into numerous distinct genres, each defined by characteristic features. The epistolary novel, such as Mary Shelley's <em>Frankenstein</em>, is composed of letters or documents. The picaresque novel follows a roguish hero through episodic social adventures, as in Fielding's <em>Tom Jones</em>. The Bildungsroman, or coming-of-age novel, traces a protagonist's moral and psychological maturation, exemplified by Dickens's <em>Great Expectations</em>.</p>
+          <p>The historical novel recreates a specific past period, while the novel of manners satirises the customs of a social class, as in Austen's <em>Pride and Prejudice</em>. The Gothic novel, exemplified by Poe's tales, combines horror and the supernatural with psychological terror. The realistic novel depicts ordinary life truthfully, while the modern novel experiments with form, as in Woolf's stream-of-consciousness technique. The postmodern novel, exemplified in this course by Mohsin Hamid's <em>Moth Smoke</em>, employs fragmented, multi-voiced narration and metafictional self-awareness. Finally, the graphic novel tells its story through sequential art, as in Spiegelman's <em>Maus</em>. Importantly, many texts blend multiple genres — <em>Moth Smoke</em> can be read as both postmodern and noir/detective fiction simultaneously.</p>
+        </div>
+      </div>
+
+      <!-- LQ3 -->
+      <div class="question-block" data-cat="theory">
+        <span class="question-number">03</span>
+        <span class="marks-tag">10 Marks</span>
+        <h3>Q3. Explain the key elements of fictional prose narrative: plot, character, setting, point of view, theme, and style.</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p class="answer-heading">Outline</p>
+          <ul class="outline-pts">
+            <li>Plot — Freytag's Pyramid stages</li>
+            <li>Character — direct/indirect characterisation, round/flat, dynamic/static</li>
+            <li>Setting — time, place, atmosphere</li>
+            <li>POV — first, second, third limited, third omniscient, unreliable narrator</li>
+            <li>Theme — central insight, examples from texts</li>
+            <li>Style and tone — diction, sentence structure, author's attitude</li>
+          </ul>
+          <p class="answer-heading">Model Answer</p>
+          <p>Plot is the structured sequence of events, typically following Freytag's Pyramid: exposition, rising action, climax, falling action, and denouement. Characterisation is the method of creating characters, either directly (the narrator states traits) or indirectly (revealed through action and dialogue), producing round (complex) or flat (simple) characters who may be dynamic (changing) or static (unchanging).</p>
+          <p>Setting establishes the time, place, and social environment, shaping atmosphere and reflecting characters' psychology. Point of view determines narrative perspective — first person offers subjective intimacy, while third person omniscient grants access to all characters' minds, as in <em>Lord of the Flies</em>. Theme is the central insight a work conveys about life or society, such as the conflict between civilisation and savagery in Golding's novel. Finally, style refers to the author's distinctive use of language, while tone reflects their attitude toward the subject — Orwell's plain, ironic style in "Shooting an Elephant" exemplifies this. Together, these elements form the architecture through which a fictional narrative achieves meaning.</p>
+        </div>
+      </div>
+
+      <!-- LQ4 -->
+      <div class="question-block" data-cat="theory">
+        <span class="question-number">04</span>
+        <span class="marks-tag">10 Marks</span>
+        <h3>Q4. Discuss the various forms of non-fictional narrative, explaining each with reference to texts studied in this course.</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p class="answer-heading">Outline</p>
+          <ul class="outline-pts">
+            <li>Essay — personal, critical, nature subtypes + course examples</li>
+            <li>Biography &amp; autobiography — distinction</li>
+            <li>Travelogue, memoir, creative non-fiction</li>
+            <li>Link each form to a prescribed essay (Bacon, Russell, Orwell, Mill, Sontag)</li>
+          </ul>
+          <p class="answer-heading">Model Answer</p>
+          <p>Non-fictional narrative encompasses several distinct forms. The essay, the most prominent form studied in this course, can be personal (Orwell's confessional "Shooting an Elephant"), critical/analytical (Sontag's "Illness as Metaphor"), or philosophical (Russell's "A Free Man's Worship" and Mill's "On Liberty"). Biography recounts another person's life factually, while autobiography is the author's account of their own life.</p>
+          <p>The travelogue narrates a journey, combining observation with cultural reflection. The memoir is more selective than autobiography, focusing on a particular period or theme. Creative non-fiction, exemplified by Sontag's stylistically rich critical writing, borrows literary devices to enrich factual prose. Each of these forms demonstrates that non-fiction, while grounded in fact, can achieve the same depth of insight and stylistic sophistication as fiction.</p>
+        </div>
+      </div>
+
+      <!-- LQ5 -->
+      <div class="question-block" data-cat="novel">
+        <span class="question-number">05</span>
+        <span class="marks-tag">10 Marks</span>
+        <h3>Q5. Discuss the theme of civilisation versus savagery in William Golding's Lord of the Flies.</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p class="answer-heading">Outline</p>
+          <ul class="outline-pts">
+            <li>Introduction: response to Coral Island, Golding's pessimistic view</li>
+            <li>Ralph/conch = civilisation; Jack/hunting = savagery</li>
+            <li>Gradual breakdown of order — fire, rules, fear of the beast</li>
+            <li>Climactic violence — murders of Simon and Piggy</li>
+            <li>Conclusion: "the beast is us" — innate evil thesis</li>
+          </ul>
+          <p class="answer-heading">Model Answer</p>
+          <p>Golding wrote <em>Lord of the Flies</em> partly as a rebuttal to R.M. Ballantyne's <em>The Coral Island</em>, which depicted marooned British boys behaving with natural decency. Golding instead argues that civilisation is a fragile construct, easily abandoned once external authority disappears. Ralph and the conch shell represent democratic order and reasoned governance, while Jack and his hunters represent the pull toward savage instinct and tribal violence.</p>
+          <p>As the novel progresses, the boys' descent is marked by the neglect of the signal fire, the abandonment of rules, and growing irrational fear of "the beast" — which Simon recognises is not external but resides within human nature itself. The murders of Simon, in a frenzied ritual dance, and later Piggy, whose death coincides with the shattering of the conch, mark the total collapse of civilised order. By the novel's end, even Ralph — the symbol of reason — is reduced to a hunted animal. Golding's bleak conclusion is that savagery is not a deviation from human nature but an expression of it, lying dormant beneath the surface of social order.</p>
+        </div>
+      </div>
+
+      <!-- LQ6 -->
+      <div class="question-block" data-cat="novel">
+        <span class="question-number">06</span>
+        <span class="marks-tag">10 Marks</span>
+        <h3>Q6. Analyse the symbolism used by Golding in Lord of the Flies.</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p class="answer-heading">Outline</p>
+          <ul class="outline-pts">
+            <li>Conch shell — order/democracy</li>
+            <li>Piggy's glasses — reason and vision</li>
+            <li>Fire — civilisation/rescue vs. destruction</li>
+            <li>The Beast — innate evil</li>
+            <li>Lord of the Flies (pig's head) — Beelzebub, the devil within</li>
+          </ul>
+          <p class="answer-heading">Model Answer</p>
+          <p>Golding's novel is dense with symbolism that reinforces its central themes. The conch shell symbolises legitimate democratic authority — its possession grants the right to speak, and its eventual shattering signals the final death of order. Piggy's glasses represent reason and intellectual clarity; their gradual destruction parallels the decline of rational thought on the island. Fire embodies a dual symbolism: it represents hope and the possibility of rescue, but when used destructively by Jack's tribe, it also represents the boys' descent into chaos.</p>
+          <p>The "beast," initially feared as an external monster, is ultimately revealed by Simon to be internal — "the beast is us." Finally, the titular Lord of the Flies — a pig's head mounted on a stake, swarming with flies — directly evokes Beelzebub, a biblical name for the devil, symbolising the pure evil that exists within human nature. Together, these symbols construct Golding's central argument about the thinness of civilisation's veneer.</p>
+        </div>
+      </div>
+
+      <!-- LQ7 -->
+      <div class="question-block" data-cat="novel">
+        <span class="question-number">07</span>
+        <span class="marks-tag">10 Marks</span>
+        <h3>Q7. Discuss Moth Smoke as a postmodern novel with reference to its narrative structure.</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p class="answer-heading">Outline</p>
+          <ul class="outline-pts">
+            <li>Define postmodern fiction — fragmentation, multiple narrators, unreliable truth</li>
+            <li>Trial framing device — multiple testimonies</li>
+            <li>Unreliable first-person narration (Daru)</li>
+            <li>Second-person chapter (direct address to reader)</li>
+            <li>Effect: moral ambiguity, reader as "judge"</li>
+          </ul>
+          <p class="answer-heading">Model Answer</p>
+          <p><em>Moth Smoke</em> exemplifies postmodern fiction through its fragmented, multi-voiced structure. The novel is framed as a series of testimonies presented at Daru's trial, with chapters narrated by different characters — Daru, Mumtaz, Ozi, and even Murad Badshah — each offering a partial and sometimes contradictory account of events. This structure denies the reader a single authoritative version of truth, forcing them to actively assemble meaning from conflicting perspectives.</p>
+          <p>Hamid further destabilises the narrative through Daru's unreliable first-person account, marked by self-justification and selective memory. A notable postmodern device is the use of second-person narration in certain chapters, directly addressing the reader as "you" and implicating them in judgement, echoing the novel's framing as a trial in which the reader becomes complicit. This structural fragmentation mirrors the novel's broader thematic concerns with moral ambiguity, unreliable justice, and the impossibility of objective truth in a corrupt society — hallmarks of the postmodern literary tradition.</p>
+        </div>
+      </div>
+
+      <!-- LQ8 -->
+      <div class="question-block" data-cat="novel">
+        <span class="question-number">08</span>
+        <span class="marks-tag">10 Marks</span>
+        <h3>Q8. Discuss the theme of class inequality in Mohsin Hamid's Moth Smoke.</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p class="answer-heading">Outline</p>
+          <ul class="outline-pts">
+            <li>Daru vs Ozi — parallel falls, unequal consequences</li>
+            <li>Setting: Lahore's elite vs struggling middle/lower class</li>
+            <li>Nuclear test backdrop — national pride vs personal ruin</li>
+            <li>Murad Badshah — entrepreneurship of the dispossessed</li>
+            <li>Conclusion: systemic impunity for the wealthy</li>
+          </ul>
+          <p class="answer-heading">Model Answer</p>
+          <p>Hamid constructs a sharp critique of Pakistan's class divide through the parallel trajectories of Daru and Ozi. Both men engage in comparable transgressions — drug use, infidelity, and ultimately violence — yet only Daru, lacking inherited wealth and connections, faces ruin and prosecution, while Ozi's privilege insulates him entirely from consequence. This asymmetry exposes a justice system and social order that protects the elite while discarding the vulnerable.</p>
+          <p>The novel is set against the backdrop of Pakistan's 1998 nuclear tests, a moment of national pride that ironically coincides with Daru's personal collapse — suggesting a disconnect between national achievement and the suffering of ordinary citizens. Characters like Murad Badshah, who survives through illicit entrepreneurship outside the formal economy, further illustrate how those without privilege must resort to criminality merely to survive. Through these intertwined narratives, Hamid presents class inequality not as a backdrop but as the central mechanism driving the novel's tragedy.</p>
+        </div>
+      </div>
+
+      <!-- LQ9 -->
+      <div class="question-block" data-cat="novel">
+        <span class="question-number">09</span>
+        <span class="marks-tag">10 Marks</span>
+        <h3>Q9. Compare and contrast Lord of the Flies and Moth Smoke as novels exploring the breakdown of moral order.</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p class="answer-heading">Outline</p>
+          <ul class="outline-pts">
+            <li>Both: descent narratives — individual/social collapse</li>
+            <li>Setting contrast: isolated island vs urban Lahore</li>
+            <li>POV contrast: omniscient vs fragmented first-person</li>
+            <li>Cause of collapse: innate evil vs systemic inequality</li>
+            <li>Conclusion: universal vs socio-political critique</li>
+          </ul>
+          <p class="answer-heading">Model Answer</p>
+          <p>Both novels depict the collapse of moral order, but through markedly different lenses. <em>Lord of the Flies</em> isolates its characters on a deserted island, removing all external social structures to reveal what Golding believed was an innate human capacity for savagery. The novel uses an omniscient third-person narrator to offer the reader an authoritative, ironic vantage point on the boys' moral disintegration.</p>
+          <p><em>Moth Smoke</em>, by contrast, is set within a fully functioning, deeply unequal urban society — Lahore — where Daru's moral collapse results not from the absence of social structure but from his exclusion from its protections. Hamid's fragmented, unreliable, multi-voiced narration denies the reader the certainty Golding provides, instead implicating the reader in judging Daru's guilt. While Golding locates the source of moral collapse within universal human nature, Hamid locates it within specific socio-economic and political structures, making <em>Moth Smoke</em> a more historically and politically situated critique, whereas <em>Lord of the Flies</em> operates as a timeless allegory.</p>
+        </div>
+      </div>
+
+      <!-- LQ10 -->
+      <div class="question-block" data-cat="story">
+        <span class="question-number">10</span>
+        <span class="marks-tag">10 Marks</span>
+        <h3>Q10. Discuss "Story of an Hour" as a feminist critique of marriage.</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p class="answer-heading">Outline</p>
+          <ul class="outline-pts">
+            <li>Context: 1890s American marriage norms</li>
+            <li>Louise's private joy vs public grief</li>
+            <li>"Free, free, free!" — language of liberation</li>
+            <li>Irony of final death — "joy that kills"</li>
+            <li>Conclusion: marriage as confinement of female identity</li>
+          </ul>
+          <p class="answer-heading">Model Answer</p>
+          <p>Kate Chopin's "Story of an Hour" offers a sharply ironic critique of marriage within the constraints of 1890s American society, where women had little legal or social autonomy. Upon hearing of her husband's apparent death, Louise Mallard initially performs the expected grief, but alone in her room, she experiences an overwhelming, unbidden sense of liberation, repeating to herself, "free, free, free!"</p>
+          <p>Chopin's prose suggests that Louise's marriage, though not abusive, was nonetheless a form of confinement — the loss of her own will to another's. The story's devastating irony emerges in its final line: when Brently returns alive, Louise dies, and doctors attribute her death to "joy that kills" — a misreading that conceals the truth the reader understands: she dies from the shock of her freedom being violently revoked. Through this irony, Chopin critiques a society that cannot conceive of marriage as anything but a woman's inevitable and desirable fate, exposing the suppressed desire for selfhood beneath socially sanctioned roles.</p>
+        </div>
+      </div>
+
+      <!-- LQ11 -->
+      <div class="question-block" data-cat="story">
+        <span class="question-number">11</span>
+        <span class="marks-tag">10 Marks</span>
+        <h3>Q11. Analyse "The Fall of the House of Usher" as a Gothic short story.</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p class="answer-heading">Outline</p>
+          <ul class="outline-pts">
+            <li>Define Gothic fiction conventions</li>
+            <li>Setting: decaying mansion, atmosphere of dread</li>
+            <li>Roderick's illness, Madeline's premature burial</li>
+            <li>House as symbol/double of the family/mind</li>
+            <li>Climax: simultaneous collapse of house and family line</li>
+          </ul>
+          <p class="answer-heading">Model Answer</p>
+          <p>Poe's "The Fall of the House of Usher" is a defining example of Gothic short fiction, employing nearly every convention of the genre. The decaying, sentient-seeming mansion establishes a claustrophobic atmosphere of dread from the story's opening lines. Roderick Usher suffers from an unnamed nervous affliction, while his twin sister Madeline suffers from catalepsy, leading to her premature entombment — a quintessential Gothic horror.</p>
+          <p>The house itself functions as a symbolic double for the Usher family line and Roderick's deteriorating psyche; the famous "fissure" running through its structure mirrors the fracture in Roderick's sanity and the family's bloodline. The climax, in which Madeline returns from her tomb to fall upon her brother, with both dying together as the house splits and sinks into the tarn, fuses the physical and psychological collapse into a single Gothic catastrophe. Poe's masterful use of atmosphere, unreliable perception, and architectural symbolism makes this story a textbook demonstration of Gothic technique.</p>
+        </div>
+      </div>
+
+      <!-- LQ12 -->
+      <div class="question-block" data-cat="story">
+        <span class="question-number">12</span>
+        <span class="marks-tag">10 Marks</span>
+        <h3>Q12. Discuss the use of irony in Guy de Maupassant's "The Necklace."</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p class="answer-heading">Outline</p>
+          <ul class="outline-pts">
+            <li>Define situational/dramatic irony</li>
+            <li>Mathilde's desire for wealth she does not possess</li>
+            <li>Loss of necklace — ten years of poverty</li>
+            <li>Final revelation — necklace was fake</li>
+            <li>Thematic conclusion: vanity, fate, social class</li>
+          </ul>
+          <p class="answer-heading">Model Answer</p>
+          <p>Irony is the central structural and thematic device in "The Necklace." Mathilde Loisel, dissatisfied with her modest middle-class life, borrows an ostentatious diamond necklace to project an image of wealth she does not possess. The first major irony is situational: her attempt to appear wealthy directly causes her descent into genuine poverty, as she and her husband spend ten gruelling years working to repay the debt incurred replacing the "lost" necklace.</p>
+          <p>The story's final and most devastating irony arrives when Mathilde discovers, after a decade of sacrifice, that the original necklace was a cheap imitation worth a fraction of what she paid to replace it. Maupassant uses this twist to critique the destructive power of vanity and the obsession with appearances over substance, while also commenting on the rigidity of social class — Mathilde's tragedy stems entirely from her refusal to accept her actual social position. The story's economy and precision in deploying irony make it a masterclass in short fiction technique.</p>
+        </div>
+      </div>
+
+      <!-- LQ13 -->
+      <div class="question-block" data-cat="story">
+        <span class="question-number">13</span>
+        <span class="marks-tag">10 Marks</span>
+        <h3>Q13. Explain Hemingway's "Iceberg Theory" of writing with detailed reference to "Cat in the Rain."</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p class="answer-heading">Outline</p>
+          <ul class="outline-pts">
+            <li>Define Iceberg Theory — 7/8ths beneath surface</li>
+            <li>Sparse dialogue, minimal exposition in the story</li>
+            <li>Cat as symbol of unmet emotional needs</li>
+            <li>Husband's indifference — implied marital alienation</li>
+            <li>Ambiguous ending — unresolved tension</li>
+          </ul>
+          <p class="answer-heading">Model Answer</p>
+          <p>Hemingway's "Iceberg Theory" holds that a writer should omit the deeper meaning of a story from its surface, allowing the underlying emotional and thematic substance to remain implicit — much like an iceberg, where only one-eighth is visible above water while the rest remains submerged. "Cat in the Rain" exemplifies this technique through its sparse, restrained prose and minimal psychological exposition.</p>
+          <p>The story never directly states that the American wife is dissatisfied with her marriage; instead, this is conveyed entirely through her fixation on rescuing a cat sheltering from the rain, and her husband George's flat, dismissive responses from his position on the bed. The cat becomes a symbol for everything the wife lacks — nurturing, identity, domestic stability, and emotional connection. The story's ambiguous ending, in which the hotel-keeper sends up a cat that may or may not be the same one, leaves the central tension unresolved, forcing the reader to do the interpretive work Hemingway's prose deliberately withholds — the essence of the Iceberg Theory in practice.</p>
+        </div>
+      </div>
+
+      <!-- LQ14 -->
+      <div class="question-block" data-cat="story">
+        <span class="question-number">14</span>
+        <span class="marks-tag">10 Marks</span>
+        <h3>Q14. Discuss the theme of disillusionment and the Joycean epiphany in "Araby."</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p class="answer-heading">Outline</p>
+          <ul class="outline-pts">
+            <li>Setting: paralysed, colonial Dublin</li>
+            <li>Boy's romantic idealisation of Mangan's sister</li>
+            <li>Journey to Araby — delays, disappointment</li>
+            <li>The bazaar's commercial banality</li>
+            <li>Climactic epiphany — self-recognition, anguish</li>
+          </ul>
+          <p class="answer-heading">Model Answer</p>
+          <p>James Joyce's "Araby," from <em>Dubliners</em>, explores the painful gap between romantic idealism and disillusioning reality, set against the backdrop of a Dublin Joyce portrayed as spiritually and culturally "paralysed" under colonial and religious constraint. The unnamed narrator develops an intense, quasi-religious infatuation with his friend's sister, investing his promise to bring her something from the Araby bazaar with disproportionate emotional significance.</p>
+          <p>His journey to the bazaar is delayed by his uncle's forgetfulness, and by the time he arrives, the event is closing, the stalls largely empty, and the remaining vendors engaged in trivial, flirtatious chatter that contrasts sharply with the boy's earnest devotion. This moment triggers Joyce's signature device — the epiphany — a sudden flash of self-awareness in which the boy recognises the vanity and folly of his romantic fantasy. The story closes with his eyes "burning with anguish and anger," capturing the universal pain of adolescent disillusionment and the collapse of idealised perception when confronted with mundane reality.</p>
+        </div>
+      </div>
+
+      <!-- LQ15 -->
+      <div class="question-block" data-cat="essay">
+        <span class="question-number">15</span>
+        <span class="marks-tag">10 Marks</span>
+        <h3>Q15. Discuss Francis Bacon's argument and prose style in "Of Marriage and Single Life."</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p class="answer-heading">Outline</p>
+          <ul class="outline-pts">
+            <li>Bacon's central argument — pros/cons of marriage for public men</li>
+            <li>"Hostages to fortune" concept</li>
+            <li>Aphoristic, Latinate prose style</li>
+            <li>Impersonal, argumentative tone — no confession</li>
+            <li>Conclusion: essay as practical philosophy</li>
+          </ul>
+          <p class="answer-heading">Model Answer</p>
+          <p>In "Of Marriage and Single Life," Francis Bacon presents a balanced but ultimately practical assessment of the advantages and disadvantages of marriage, particularly for men engaged in public affairs. He argues that unmarried men, free of family obligations, make the best servants of the public good, scholars, and soldiers of fortune, since they are unencumbered by responsibility. Married men, conversely, become "hostages to fortune" — their wife and children act as restraints upon ambitious or risky undertakings, yet also make them better, more humane citizens and subjects.</p>
+          <p>Bacon's prose style is distinctly aphoristic and dense, composed of short, balanced, often paradoxical sentences influenced by his classical and Latinate education. Unlike later personal essayists such as Orwell, Bacon maintains complete impersonality — the essay offers no autobiographical revelation, functioning instead as detached philosophical counsel. This combination of practical wisdom and compressed style established Bacon as the founding figure of the English essay tradition.</p>
+        </div>
+      </div>
+
+      <!-- LQ16 -->
+      <div class="question-block" data-cat="essay">
+        <span class="question-number">16</span>
+        <span class="marks-tag">10 Marks</span>
+        <h3>Q16. Explain Bertrand Russell's central philosophy in "A Free Man's Worship."</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p class="answer-heading">Outline</p>
+          <ul class="outline-pts">
+            <li>Materialist, indifferent universe premise</li>
+            <li>Human meaning created, not given</li>
+            <li>"Worship" of goodness, truth, beauty defined</li>
+            <li>Freedom through acceptance of mortality</li>
+            <li>Conclusion: dignity in defiance, not denial</li>
+          </ul>
+          <p class="answer-heading">Model Answer</p>
+          <p>Bertrand Russell's "A Free Man's Worship" confronts the bleak implications of a scientific, materialist worldview in which the universe operates without purpose, design, or concern for human values. Rather than succumbing to despair, Russell argues that this very indifference liberates human beings to create their own meaning — by freely choosing to value goodness, beauty, and truth, independent of any cosmic guarantee that these values matter.</p>
+          <p>Russell's notion of "worship" is not religious but a metaphor for sustained devotion to ideals that elevate human existence above mere power and survival. He contends that true freedom and dignity arise not from denying mortality or the universe's indifference, but from honestly accepting these realities while still choosing to live nobly. This essay represents an early and influential articulation of secular humanist ethics, locating meaning within human agency rather than external cosmic order.</p>
+        </div>
+      </div>
+
+      <!-- LQ17 -->
+      <div class="question-block" data-cat="essay">
+        <span class="question-number">17</span>
+        <span class="marks-tag">10 Marks</span>
+        <h3>Q17. Discuss Orwell's "Shooting an Elephant" as a critique of imperialism.</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p class="answer-heading">Outline</p>
+          <ul class="outline-pts">
+            <li>Setting: British Burma, colonial tension</li>
+            <li>The elephant incident — pressure of the watching crowd</li>
+            <li>Narrator's internal conflict — knows it's wrong</li>
+            <li>Key quote/idea: oppressor destroys his own freedom</li>
+            <li>Conclusion: imperialism corrupts the coloniser too</li>
+          </ul>
+          <p class="answer-heading">Model Answer</p>
+          <p>George Orwell's "Shooting an Elephant" is a powerful personal essay that critiques British imperialism not through abstract argument but through a single, vividly rendered incident. As a colonial police officer in Burma, Orwell is summoned to deal with a working elephant that has gone "must" and killed a man. By the time he locates the now-calm animal, killing it is no longer necessary — yet a large Burmese crowd has gathered, expecting him to act.</p>
+          <p>Orwell's central insight is that the colonial officer, despite his apparent authority, is in fact a "hollow, posing dummy" controlled by the expectations of those he rules — he shoots the elephant purely to avoid appearing weak or ridiculous before the colonised population, against his own moral judgement. Orwell concludes that imperialism destroys the freedom of the oppressor as much as the oppressed, since maintaining the colonial illusion of unwavering strength requires constant self-betrayal. This essay remains one of the most incisive personal critiques of empire in English prose, notable for its honesty about complicity rather than self-righteous condemnation from a distance.</p>
+        </div>
+      </div>
+
+      <!-- LQ18 -->
+      <div class="question-block" data-cat="essay">
+        <span class="question-number">18</span>
+        <span class="marks-tag">10 Marks</span>
+        <h3>Q18. Explain John Stuart Mill's concept of liberty and the "harm principle" in "On Liberty" (Chapter 1).</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p class="answer-heading">Outline</p>
+          <ul class="outline-pts">
+            <li>Context: liberalism, individual vs society</li>
+            <li>Harm principle defined precisely</li>
+            <li>Tyranny of the majority concept</li>
+            <li>Importance of free thought and expression</li>
+            <li>Conclusion: individuality as social good</li>
+          </ul>
+          <p class="answer-heading">Model Answer</p>
+          <p>In the opening chapter of "On Liberty," John Stuart Mill establishes one of the most influential principles in liberal political philosophy: the harm principle. Mill argues that the only legitimate justification for society or government to exercise power over an individual against their will is to prevent harm to others — a person's own physical or moral welfare is never sufficient grounds for coercive interference.</p>
+          <p>Mill extends his concern beyond formal government tyranny to what he terms the "tyranny of the majority" — the more insidious threat posed by social customs, public opinion, and collective disapproval, which can suppress individuality just as effectively as law. He places particular emphasis on the protection of freedom of thought and expression, arguing that even false opinions serve society by testing and strengthening true ones through open debate. Mill's essay concludes that individuality is not merely a private matter but a vital source of social progress, creativity, and moral development, making its protection essential to a flourishing society.</p>
+        </div>
+      </div>
+
+      <!-- LQ19 -->
+      <div class="question-block" data-cat="essay">
+        <span class="question-number">19</span>
+        <span class="marks-tag">10 Marks</span>
+        <h3>Q19. Discuss Susan Sontag's critique of metaphorical language surrounding illness in "Illness as Metaphor" (Chapter 9).</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p class="answer-heading">Outline</p>
+          <ul class="outline-pts">
+            <li>Sontag's thesis: metaphor distorts and stigmatises illness</li>
+            <li>Military metaphors — "battle," "fight," "losing"</li>
+            <li>Effect on patients — guilt, blame, moral judgement</li>
+            <li>Cancer and TB as historically "moralised" diseases</li>
+            <li>Conclusion: call for illness to be seen purely physically</li>
+          </ul>
+          <p class="answer-heading">Model Answer</p>
+          <p>In "Illness as Metaphor," Susan Sontag undertakes a critical analysis of how cultural language constructs and distorts the experience of disease, particularly cancer and tuberculosis. Her central thesis is that society habitually wraps illness in metaphor — most damagingly, military metaphors that frame the patient as a "warrior" "battling" or "fighting" disease, with death framed as a personal "defeat" or "loss."</p>
+          <p>Sontag argues that this metaphorical framing is not merely rhetorical but actively harmful: it implies that recovery depends on the patient's strength of will or character, while death implies weakness or moral failure, placing unjust psychological burden on the sick. She traces how diseases such as TB and cancer were historically moralised, attributed to repressed emotion or personal failing, rather than understood as purely biological phenomena. Sontag's essay ultimately calls for illness to be "freed" from metaphor entirely, advocating for a clear-eyed, demystified understanding of disease as a physical condition, not a referendum on character.</p>
+        </div>
+      </div>
+
+      <!-- LQ20 -->
+      <div class="question-block" data-cat="theory">
+        <span class="question-number">20</span>
+        <span class="marks-tag">10 Marks</span>
+        <h3>Q20. Discuss the role of point of view (POV) and narrative technique across the prescribed texts, comparing at least three examples.</h3>
+        <button class="show-answer-btn" onclick="toggleAnswer(this)">▶ Show Answer</button>
+        <div class="answer-content" style="display:none">
+          <p class="answer-heading">Outline</p>
+          <ul class="outline-pts">
+            <li>Define POV types relevant to the syllabus</li>
+            <li>Lord of the Flies — third-person omniscient, dramatic irony</li>
+            <li>Moth Smoke — fragmented first-person/second-person, unreliable</li>
+            <li>Cat in the Rain — close third person, restrained narration (Iceberg Theory)</li>
+            <li>Conclusion: POV as a tool for controlling reader knowledge and sympathy</li>
+          </ul>
+          <p class="answer-heading">Model Answer</p>
+          <p>Point of view is one of the most powerful tools an author uses to shape reader understanding, and the prescribed texts demonstrate a wide range of techniques. In <em>Lord of the Flies</em>, Golding employs a third-person omniscient narrator who has access to multiple characters' thoughts, allowing the reader to perceive the gap between the boys' self-understanding and their actual moral decline — producing sustained dramatic irony as civilisation collapses.</p>
+          <p>By contrast, <em>Moth Smoke</em> uses a fragmented structure of competing first-person narrators, including an unreliable account from Daru himself, alongside an unusual second-person chapter that implicates the reader directly. This technique denies narrative certainty, mirroring the novel's themes of contested truth and moral ambiguity. Hemingway's "Cat in the Rain" uses a restrained close third-person narration that reveals almost nothing of the characters' interiority directly, forcing the reader to infer the wife's emotional dissatisfaction purely through action and dialogue — exemplifying his Iceberg Theory. Taken together, these examples show that point of view is never a neutral technical choice but a deliberate strategy authors use to control sympathy, irony, ambiguity, and the reader's relationship to truth within the text.</p>
+        </div>
+      </div>
+
+    </div><!-- /qList -->
+  </div>
+</div>
+
+<footer class="site-footer">
+  <strong>ENG-201 Study Portal</strong> · 20 Most Important Long Questions · 10 Marks Each
+</footer>
+
+<script src="../js/main.js"></script>
+<script>
+  document.querySelectorAll('.chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+      const filter = chip.dataset.filter;
+      document.querySelectorAll('.question-block').forEach(block => {
+        block.style.display = (filter === 'all' || block.dataset.cat === filter) ? '' : 'none';
+      });
+    });
+  });
+
+  let allExpanded = false;
+  function toggleAllAnswers() {
+    allExpanded = !allExpanded;
+    document.querySelectorAll('.answer-content').forEach(ans => {
+      ans.style.display = allExpanded ? 'block' : 'none';
+    });
+    document.querySelectorAll('.show-answer-btn').forEach(btn => {
+      btn.textContent = allExpanded ? '▼ Hide Answer' : '▶ Show Answer';
+    });
+    event.target.textContent = allExpanded ? '▲ Collapse All Answers' : '▼ Expand All Answers';
+  }
+</script>
+</body>
+</html>
