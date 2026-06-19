@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>100 MCQs | ENG-201</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .quiz-header-grid {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+      align-items: start;
+    }
+    .filter-chips { display: flex; gap: .4rem; flex-wrap: wrap; }
+    .chip {
+      padding: .4rem .9rem; border-radius: 999px; font-size: .78rem; font-weight: 600;
+      cursor: pointer; border: 1.5px solid var(--parchment-dark); color: var(--ink-mid);
+      transition: var(--transition); background: var(--white);
+    }
+    .chip:hover, .chip.active { border-color: var(--gold); background: rgba(201,168,76,.1); color: #7A5C10; }
+    .reset-btn {
+      width: 100%;
+      padding: .6rem 1rem; border-radius: var(--radius);
+      font-size: .82rem; font-weight: 600;
+      border: 1.5px solid var(--rose); color: var(--rose); background: transparent;
+      cursor: pointer; transition: var(--transition);
+    }
+    .reset-btn:hover { background: var(--rose); color: var(--white); }
+    .quiz-intro-text { font-size: .9rem; color: var(--ink-light); margin-bottom: 1rem; }
+    @media (max-width: 800px) {
+      .quiz-header-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-brand">ENG-201 <span>Fictional &amp; Non-fictional Narrative</span></div>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../chapters/chapter1.html">Notes</a></li>
+    <li><a href="../short-questions/sq.html">Short Q</a></li>
+    <li><a href="../long-questions/lq.html">Long Q</a></li>
+    <li><a href="mcqs.html" class="active">MCQs</a></li>
+  </ul>
+  <div class="nav-toggle"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="breadcrumb">
+  <a href="../index.html">Home</a><span class="sep">/</span><span class="current">MCQs</span>
+</div>
+
+<div class="page-header">
+  <p class="eyebrow">Interactive Quiz · 100 Questions</p>
+  <h1>Most Important MCQs</h1>
+  <p>Tap an option to check your answer instantly. Covers every high-yield topic from theory to texts.</p>
+</div>
+
+<div class="container">
+  <div class="page-body">
+
+    <div class="quiz-header-grid">
+      <div>
+        <p class="quiz-intro-text">Click any option below to reveal whether it's correct. Your score updates live on the right.</p>
+        <div class="filter-chips" id="filterChips">
+          <span class="chip active" data-filter="all">All (100)</span>
+          <span class="chip" data-filter="theory">Theory (35)</span>
+          <span class="chip" data-filter="novel">Novels (30)</span>
+          <span class="chip" data-filter="story">Short Stories (20)</span>
+          <span class="chip" data-filter="essay">Essays (15)</span>
+        </div>
+      </div>
+      <div>
+        <div class="score-board">
+          <div class="score-val">0 / 100</div>
+          <div class="score-label score-sub">0 answered • 0% complete</div>
+        </div>
+        <div class="progress-bar-wrap"><div class="progress-bar-fill" style="width:0%"></div></div>
+        <button class="reset-btn mt-2" onclick="resetMCQ()">↺ Reset Quiz</button>
+      </div>
+    </div>
+
+    <div id="mcqList">
+
+      <div class="mcq-block" data-correct="1" data-cat="theory">
+        <div class="mcq-question">Q1. What is the primary purpose of fictional narrative?</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. To record verifiable facts</div>
+          <div class="mcq-option">B. To entertain and explore human experience through invention</div>
+          <div class="mcq-option">C. To argue a political point</div>
+          <div class="mcq-option">D. To document historical events</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="3" data-cat="theory">
+        <div class="mcq-question">Q2. Which of the following is NOT a form of fictional prose narrative?</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Novel</div>
+          <div class="mcq-option">B. Novella</div>
+          <div class="mcq-option">C. Short Story</div>
+          <div class="mcq-option">D. Memoir</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="theory">
+        <div class="mcq-question">Q3. A non-fictional narrative is primarily concerned with:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Imaginative invention</div>
+          <div class="mcq-option">B. Real, verifiable events and people</div>
+          <div class="mcq-option">C. Symbolic allegory</div>
+          <div class="mcq-option">D. Fantasy worlds</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="2" data-cat="theory">
+        <div class="mcq-question">Q4. Which is a form of non-fictional narrative?</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Novella</div>
+          <div class="mcq-option">B. Bildungsroman</div>
+          <div class="mcq-option">C. Travelogue</div>
+          <div class="mcq-option">D. Picaresque novel</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="theory">
+        <div class="mcq-question">Q5. The typical word count range for a novel is approximately:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. 1,000–5,000 words</div>
+          <div class="mcq-option">B. Over 40,000 words</div>
+          <div class="mcq-option">C. 100–500 words</div>
+          <div class="mcq-option">D. 5,000–10,000 words</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="theory">
+        <div class="mcq-question">Q6. A short story is best defined as:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. A long, multi-plot narrative</div>
+          <div class="mcq-option">B. A brief prose fiction focused on a single event or character</div>
+          <div class="mcq-option">C. A factual account of a journey</div>
+          <div class="mcq-option">D. A collection of letters</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="theory">
+        <div class="mcq-question">Q7. Poe's theory of short fiction emphasises:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Multiple subplots</div>
+          <div class="mcq-option">B. Unity of effect</div>
+          <div class="mcq-option">C. Historical accuracy</div>
+          <div class="mcq-option">D. Episodic structure</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="2" data-cat="theory">
+        <div class="mcq-question">Q8. A novella is best described as:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Shorter than a short story</div>
+          <div class="mcq-option">B. Longer than a novel</div>
+          <div class="mcq-option">C. Intermediate in length between short story and novel</div>
+          <div class="mcq-option">D. A form of poetry</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="3" data-cat="theory">
+        <div class="mcq-question">Q9. Freytag's Pyramid does NOT include which stage?</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Exposition</div>
+          <div class="mcq-option">B. Climax</div>
+          <div class="mcq-option">C. Denouement</div>
+          <div class="mcq-option">D. Prologue</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="theory">
+        <div class="mcq-question">Q10. The turning point of highest tension in a plot is called the:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Exposition</div>
+          <div class="mcq-option">B. Climax</div>
+          <div class="mcq-option">C. Denouement</div>
+          <div class="mcq-option">D. Falling Action</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="theory">
+        <div class="mcq-question">Q11. Direct characterisation occurs when:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Traits are revealed through action only</div>
+          <div class="mcq-option">B. The author explicitly states a character's traits</div>
+          <div class="mcq-option">C. The character speaks in dialect</div>
+          <div class="mcq-option">D. The setting reflects the character</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="theory">
+        <div class="mcq-question">Q12. Indirect characterisation reveals character through:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Author's direct statement</div>
+          <div class="mcq-option">B. Actions, speech, and others' reactions</div>
+          <div class="mcq-option">C. Footnotes</div>
+          <div class="mcq-option">D. Chapter titles</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="2" data-cat="theory">
+        <div class="mcq-question">Q13. A character who is complex and multi-dimensional is called:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Flat</div>
+          <div class="mcq-option">B. Static</div>
+          <div class="mcq-option">C. Round</div>
+          <div class="mcq-option">D. Stock</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="2" data-cat="theory">
+        <div class="mcq-question">Q14. A character who does not change throughout the story is:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Dynamic</div>
+          <div class="mcq-option">B. Round</div>
+          <div class="mcq-option">C. Static</div>
+          <div class="mcq-option">D. Antagonist</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="theory">
+        <div class="mcq-question">Q15. Setting refers to:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. The author's opinion</div>
+          <div class="mcq-option">B. Time, place, and social environment of a narrative</div>
+          <div class="mcq-option">C. The moral of the story</div>
+          <div class="mcq-option">D. The narrator's identity</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="theory">
+        <div class="mcq-question">Q16. First-person point of view is characterised by:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. An all-knowing narrator</div>
+          <div class="mcq-option">B. A narrator who is a character using 'I'</div>
+          <div class="mcq-option">C. A narrator addressing 'you'</div>
+          <div class="mcq-option">D. No narrator at all</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="2" data-cat="theory">
+        <div class="mcq-question">Q17. Third-person omniscient POV grants the narrator:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Access to only one character's thoughts</div>
+          <div class="mcq-option">B. No access to any character's thoughts</div>
+          <div class="mcq-option">C. Access to all characters' thoughts and feelings</div>
+          <div class="mcq-option">D. Access only to dialogue</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="0" data-cat="theory">
+        <div class="mcq-question">Q18. An unreliable narrator is one whose:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Credibility is compromised</div>
+          <div class="mcq-option">B. Knowledge is complete</div>
+          <div class="mcq-option">C. Identity is always revealed</div>
+          <div class="mcq-option">D. Voice is always objective</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="theory">
+        <div class="mcq-question">Q19. Theme in a literary work refers to:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. The setting only</div>
+          <div class="mcq-option">B. The central idea or underlying message</div>
+          <div class="mcq-option">C. The author's biography</div>
+          <div class="mcq-option">D. The book's title</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="theory">
+        <div class="mcq-question">Q20. Tone refers to:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. The reader's emotional response</div>
+          <div class="mcq-option">B. The author's attitude toward the subject matter</div>
+          <div class="mcq-option">C. The book's length</div>
+          <div class="mcq-option">D. The plot's climax</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="theory">
+        <div class="mcq-question">Q21. Mood, as distinct from tone, refers to:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. The author's attitude</div>
+          <div class="mcq-option">B. The emotional atmosphere felt by the reader</div>
+          <div class="mcq-option">C. The narrator's identity</div>
+          <div class="mcq-option">D. The setting's geography</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="theory">
+        <div class="mcq-question">Q22. An epistolary novel is structured through:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Spoken dialogue only</div>
+          <div class="mcq-option">B. Letters, diary entries, or documents</div>
+          <div class="mcq-option">C. Third-person narration only</div>
+          <div class="mcq-option">D. Poetic verse</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="theory">
+        <div class="mcq-question">Q23. The picaresque novel follows:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. A noble knight on a quest</div>
+          <div class="mcq-option">B. A roguish hero through episodic social adventures</div>
+          <div class="mcq-option">C. A scientist's discoveries</div>
+          <div class="mcq-option">D. A royal family's history</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="theory">
+        <div class="mcq-question">Q24. Bildungsroman is best translated as:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Novel of romance</div>
+          <div class="mcq-option">B. Novel of formation / coming-of-age</div>
+          <div class="mcq-option">C. Novel of crime</div>
+          <div class="mcq-option">D. Novel of war</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="0" data-cat="theory">
+        <div class="mcq-question">Q25. A historical novel is defined by its:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Setting in a specific past period with fictional characters</div>
+          <div class="mcq-option">B. Complete factual accuracy</div>
+          <div class="mcq-option">C. Absence of any plot</div>
+          <div class="mcq-option">D. Focus on future events</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="theory">
+        <div class="mcq-question">Q26. A novel of manners primarily focuses on:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Supernatural horror</div>
+          <div class="mcq-option">B. Customs and values of a social class</div>
+          <div class="mcq-option">C. Scientific discovery</div>
+          <div class="mcq-option">D. War strategy</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="theory">
+        <div class="mcq-question">Q27. Which genre combines horror, mystery, and the supernatural with psychological terror?</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Realistic novel</div>
+          <div class="mcq-option">B. Gothic novel</div>
+          <div class="mcq-option">C. Novel of manners</div>
+          <div class="mcq-option">D. Picaresque novel</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="theory">
+        <div class="mcq-question">Q28. The realistic novel aims to represent:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Fantastical creatures</div>
+          <div class="mcq-option">B. Ordinary life and society truthfully</div>
+          <div class="mcq-option">C. Future technology</div>
+          <div class="mcq-option">D. Religious allegory only</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="theory">
+        <div class="mcq-question">Q29. The postmodern novel is typically characterised by:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Linear, single-narrator structure</div>
+          <div class="mcq-option">B. Self-referential, fragmented, metafictional technique</div>
+          <div class="mcq-option">C. Strict historical accuracy</div>
+          <div class="mcq-option">D. Absence of all characters</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="theory">
+        <div class="mcq-question">Q30. A graphic novel tells its narrative primarily through:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Prose alone</div>
+          <div class="mcq-option">B. Sequential art combined with text</div>
+          <div class="mcq-option">C. Musical notation</div>
+          <div class="mcq-option">D. Footnotes</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="theory">
+        <div class="mcq-question">Q31. Which of these is an essay subtype mentioned in the course?</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Epistolary essay</div>
+          <div class="mcq-option">B. Personal essay</div>
+          <div class="mcq-option">C. Picaresque essay</div>
+          <div class="mcq-option">D. Gothic essay</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="theory">
+        <div class="mcq-question">Q32. Biography differs from autobiography in that biography is:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Written by the subject about themselves</div>
+          <div class="mcq-option">B. Written by someone else about the subject</div>
+          <div class="mcq-option">C. Always fictional</div>
+          <div class="mcq-option">D. Always in verse</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="theory">
+        <div class="mcq-question">Q33. A memoir, compared to a full autobiography, is typically:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. More comprehensive and chronological</div>
+          <div class="mcq-option">B. More selective, focused on a period or theme</div>
+          <div class="mcq-option">C. Always written in third person</div>
+          <div class="mcq-option">D. Never based on real events</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="theory">
+        <div class="mcq-question">Q34. Creative non-fiction is best described as:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Pure invention with no factual basis</div>
+          <div class="mcq-option">B. Factual writing that uses literary techniques</div>
+          <div class="mcq-option">C. A type of poetry</div>
+          <div class="mcq-option">D. A legal document</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="theory">
+        <div class="mcq-question">Q35. A travelogue is a narrative primarily concerned with:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. A courtroom trial</div>
+          <div class="mcq-option">B. An account of a journey</div>
+          <div class="mcq-option">C. A scientific experiment</div>
+          <div class="mcq-option">D. A royal biography</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="novel">
+        <div class="mcq-question">Q36. Who is the author of Lord of the Flies?</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Mohsin Hamid</div>
+          <div class="mcq-option">B. William Golding</div>
+          <div class="mcq-option">C. George Orwell</div>
+          <div class="mcq-option">D. Edgar Allan Poe</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="novel">
+        <div class="mcq-question">Q37. In Lord of the Flies, the conch shell symbolises:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Savagery</div>
+          <div class="mcq-option">B. Democratic order and authority</div>
+          <div class="mcq-option">C. The beast</div>
+          <div class="mcq-option">D. Death</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="2" data-cat="novel">
+        <div class="mcq-question">Q38. Which character represents reason and intellect in Lord of the Flies?</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Jack</div>
+          <div class="mcq-option">B. Roger</div>
+          <div class="mcq-option">C. Piggy</div>
+          <div class="mcq-option">D. Simon</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="novel">
+        <div class="mcq-question">Q39. Who is the protagonist representing civilisation and order in Lord of the Flies?</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Jack</div>
+          <div class="mcq-option">B. Ralph</div>
+          <div class="mcq-option">C. Roger</div>
+          <div class="mcq-option">D. Maurice</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="novel">
+        <div class="mcq-question">Q40. Jack Merridew primarily represents:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Reason and order</div>
+          <div class="mcq-option">B. Savagery and the desire for power</div>
+          <div class="mcq-option">C. Spiritual insight</div>
+          <div class="mcq-option">D. Scientific thought</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="novel">
+        <div class="mcq-question">Q41. Simon's character is most closely associated with:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Cruelty</div>
+          <div class="mcq-option">B. Spiritual insight and natural goodness</div>
+          <div class="mcq-option">C. Political ambition</div>
+          <div class="mcq-option">D. Cowardice</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="2" data-cat="novel">
+        <div class="mcq-question">Q42. Who among the boys is characterised by pure, sadistic cruelty?</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Piggy</div>
+          <div class="mcq-option">B. Ralph</div>
+          <div class="mcq-option">C. Roger</div>
+          <div class="mcq-option">D. Simon</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="novel">
+        <div class="mcq-question">Q43. The 'beast' in Lord of the Flies ultimately symbolises:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. A real wild animal on the island</div>
+          <div class="mcq-option">B. Innate human evil</div>
+          <div class="mcq-option">C. The British Navy</div>
+          <div class="mcq-option">D. A ghost</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="novel">
+        <div class="mcq-question">Q44. What does fire represent in the early chapters of the novel?</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Destruction only</div>
+          <div class="mcq-option">B. Civilisation and hope of rescue</div>
+          <div class="mcq-option">C. The beast</div>
+          <div class="mcq-option">D. Religious ritual</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="novel">
+        <div class="mcq-question">Q45. Piggy's glasses symbolise:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Savagery</div>
+          <div class="mcq-option">B. Reason and intellectual vision</div>
+          <div class="mcq-option">C. Fire</div>
+          <div class="mcq-option">D. The conch</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="novel">
+        <div class="mcq-question">Q46. Simon is killed by the other boys because:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. He stole food</div>
+          <div class="mcq-option">B. He tried to reveal the truth about the beast during a frenzied ritual</div>
+          <div class="mcq-option">C. He attacked Ralph</div>
+          <div class="mcq-option">D. He broke the conch</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="novel">
+        <div class="mcq-question">Q47. The 'Lord of the Flies' (the pig's head) is a symbolic reference to:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. A Greek god</div>
+          <div class="mcq-option">B. Beelzebub, a name for the devil</div>
+          <div class="mcq-option">C. A historical king</div>
+          <div class="mcq-option">D. A type of bird</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="novel">
+        <div class="mcq-question">Q48. Golding wrote Lord of the Flies partly as a response to which earlier novel?</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Robinson Crusoe</div>
+          <div class="mcq-option">B. The Coral Island</div>
+          <div class="mcq-option">C. Treasure Island</div>
+          <div class="mcq-option">D. Moby Dick</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="2" data-cat="novel">
+        <div class="mcq-question">Q49. What is the predominant point of view used in Lord of the Flies?</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. First person</div>
+          <div class="mcq-option">B. Second person</div>
+          <div class="mcq-option">C. Third person omniscient</div>
+          <div class="mcq-option">D. Epistolary</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="novel">
+        <div class="mcq-question">Q50. The central theme of Lord of the Flies concerns the conflict between:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Love and hate</div>
+          <div class="mcq-option">B. Civilisation and savagery</div>
+          <div class="mcq-option">C. Science and religion</div>
+          <div class="mcq-option">D. Wealth and poverty</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="novel">
+        <div class="mcq-question">Q51. Who is the author of Moth Smoke?</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. William Golding</div>
+          <div class="mcq-option">B. Mohsin Hamid</div>
+          <div class="mcq-option">C. George Orwell</div>
+          <div class="mcq-option">D. Kate Chopin</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="2" data-cat="novel">
+        <div class="mcq-question">Q52. Moth Smoke is primarily set in which city?</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Karachi</div>
+          <div class="mcq-option">B. Islamabad</div>
+          <div class="mcq-option">C. Lahore</div>
+          <div class="mcq-option">D. Multan</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="2" data-cat="novel">
+        <div class="mcq-question">Q53. Who is the protagonist of Moth Smoke?</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Ozi</div>
+          <div class="mcq-option">B. Murad Badshah</div>
+          <div class="mcq-option">C. Daru Shezad</div>
+          <div class="mcq-option">D. Mumtaz</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="novel">
+        <div class="mcq-question">Q54. Daru loses his job as a:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Lawyer</div>
+          <div class="mcq-option">B. Banker</div>
+          <div class="mcq-option">C. Teacher</div>
+          <div class="mcq-option">D. Journalist</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="0" data-cat="novel">
+        <div class="mcq-question">Q55. Daru's affair in the novel is with:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Ozi's wife, Mumtaz</div>
+          <div class="mcq-option">B. His own wife</div>
+          <div class="mcq-option">C. Murad Badshah's sister</div>
+          <div class="mcq-option">D. His employer</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="novel">
+        <div class="mcq-question">Q56. Ozi represents which social group in the novel?</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. The struggling poor</div>
+          <div class="mcq-option">B. The privileged, protected elite</div>
+          <div class="mcq-option">C. Foreign tourists</div>
+          <div class="mcq-option">D. Religious clergy</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="novel">
+        <div class="mcq-question">Q57. Moth Smoke is structured around:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. A single first-person narrator</div>
+          <div class="mcq-option">B. Multiple voiced testimonies framed around a trial</div>
+          <div class="mcq-option">C. A chronological diary</div>
+          <div class="mcq-option">D. Letters between characters</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="novel">
+        <div class="mcq-question">Q58. The title 'Moth Smoke' symbolises:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Industrial pollution</div>
+          <div class="mcq-option">B. Attraction to a destructive, alluring lifestyle</div>
+          <div class="mcq-option">C. A type of incense</div>
+          <div class="mcq-option">D. Daru's profession</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="novel">
+        <div class="mcq-question">Q59. Which historical event forms the backdrop of Moth Smoke?</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Partition of India</div>
+          <div class="mcq-option">B. Pakistan's 1998 nuclear tests</div>
+          <div class="mcq-option">C. World War II</div>
+          <div class="mcq-option">D. The Cold War's end</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="novel">
+        <div class="mcq-question">Q60. Murad Badshah survives primarily through:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Government employment</div>
+          <div class="mcq-option">B. Illicit, informal entrepreneurship</div>
+          <div class="mcq-option">C. Inherited wealth</div>
+          <div class="mcq-option">D. Academic work</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="novel">
+        <div class="mcq-question">Q61. Moth Smoke is best classified, in terms of genre, as a:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Gothic romance</div>
+          <div class="mcq-option">B. Postmodern novel with noir elements</div>
+          <div class="mcq-option">C. Epistolary novel</div>
+          <div class="mcq-option">D. Historical epic</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="novel">
+        <div class="mcq-question">Q62. The narrative technique of Moth Smoke creates which overall effect?</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Complete narrative certainty</div>
+          <div class="mcq-option">B. Moral ambiguity and contested truth</div>
+          <div class="mcq-option">C. A single fixed moral lesson</div>
+          <div class="mcq-option">D. A purely comic tone</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="novel">
+        <div class="mcq-question">Q63. Which chapter technique directly implicates the reader as a judge in Moth Smoke?</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Third-person omniscient narration</div>
+          <div class="mcq-option">B. Second-person narration</div>
+          <div class="mcq-option">C. Stream-of-consciousness only</div>
+          <div class="mcq-option">D. Footnoted commentary</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="novel">
+        <div class="mcq-question">Q64. Daru's downfall in the novel primarily stems from:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. A natural disaster</div>
+          <div class="mcq-option">B. Job loss, addiction, and social exclusion</div>
+          <div class="mcq-option">C. A war</div>
+          <div class="mcq-option">D. A religious conflict</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="novel">
+        <div class="mcq-question">Q65. Moth Smoke critiques Pakistani society chiefly through the theme of:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Rural agricultural life</div>
+          <div class="mcq-option">B. Class inequality and elite impunity</div>
+          <div class="mcq-option">C. International diplomacy</div>
+          <div class="mcq-option">D. Scientific progress</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="0" data-cat="story">
+        <div class="mcq-question">Q66. Who wrote 'Story of an Hour'?</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Kate Chopin</div>
+          <div class="mcq-option">B. Edgar Allan Poe</div>
+          <div class="mcq-option">C. Guy de Maupassant</div>
+          <div class="mcq-option">D. James Joyce</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="story">
+        <div class="mcq-question">Q67. In 'Story of an Hour', Louise Mallard's husband is initially believed to have died in a:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Car accident</div>
+          <div class="mcq-option">B. Train accident</div>
+          <div class="mcq-option">C. Fire</div>
+          <div class="mcq-option">D. Shipwreck</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="story">
+        <div class="mcq-question">Q68. Louise Mallard's private reaction to the news of her husband's death is one of:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Pure grief</div>
+          <div class="mcq-option">B. Liberation and joy</div>
+          <div class="mcq-option">C. Indifference</div>
+          <div class="mcq-option">D. Anger</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="0" data-cat="story">
+        <div class="mcq-question">Q69. Louise Mallard dies at the end of the story because:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Of a heart condition triggered by the shock of her husband's return</div>
+          <div class="mcq-option">B. She was murdered</div>
+          <div class="mcq-option">C. She fell ill from a fever</div>
+          <div class="mcq-option">D. Of old age</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="story">
+        <div class="mcq-question">Q70. 'Story of an Hour' is most often read as a critique of:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Religious institutions</div>
+          <div class="mcq-option">B. Marriage and the limits placed on women</div>
+          <div class="mcq-option">C. Political corruption</div>
+          <div class="mcq-option">D. Class systems</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="story">
+        <div class="mcq-question">Q71. Who wrote 'The Fall of the House of Usher'?</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Kate Chopin</div>
+          <div class="mcq-option">B. Edgar Allan Poe</div>
+          <div class="mcq-option">C. Ernest Hemingway</div>
+          <div class="mcq-option">D. James Joyce</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="story">
+        <div class="mcq-question">Q72. 'The Fall of the House of Usher' is best classified as a:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Realist story</div>
+          <div class="mcq-option">B. Gothic story</div>
+          <div class="mcq-option">C. Picaresque tale</div>
+          <div class="mcq-option">D. Travelogue</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="2" data-cat="story">
+        <div class="mcq-question">Q73. Roderick Usher's twin sister, who is prematurely entombed, is named:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Annabel</div>
+          <div class="mcq-option">B. Ligeia</div>
+          <div class="mcq-option">C. Madeline</div>
+          <div class="mcq-option">D. Eleanora</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="story">
+        <div class="mcq-question">Q74. In 'The Fall of the House of Usher', the house functions symbolically as:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. A church</div>
+          <div class="mcq-option">B. A double for the family line and Roderick's mind</div>
+          <div class="mcq-option">C. A prison for criminals</div>
+          <div class="mcq-option">D. A marketplace</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="0" data-cat="story">
+        <div class="mcq-question">Q75. Who wrote 'The Necklace'?</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Guy de Maupassant</div>
+          <div class="mcq-option">B. Kate Chopin</div>
+          <div class="mcq-option">C. Edgar Allan Poe</div>
+          <div class="mcq-option">D. Susan Sontag</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="story">
+        <div class="mcq-question">Q76. In 'The Necklace', Mathilde borrows the necklace for:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. A wedding</div>
+          <div class="mcq-option">B. A ball</div>
+          <div class="mcq-option">C. A funeral</div>
+          <div class="mcq-option">D. A business meeting</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="story">
+        <div class="mcq-question">Q77. The central twist of 'The Necklace' reveals that the necklace was:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Stolen</div>
+          <div class="mcq-option">B. A fake/imitation</div>
+          <div class="mcq-option">C. A family heirloom</div>
+          <div class="mcq-option">D. Made of gold</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="story">
+        <div class="mcq-question">Q78. 'The Necklace' primarily critiques the theme of:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Religious devotion</div>
+          <div class="mcq-option">B. Vanity and obsession with appearances</div>
+          <div class="mcq-option">C. Political revolution</div>
+          <div class="mcq-option">D. Scientific ignorance</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="0" data-cat="story">
+        <div class="mcq-question">Q79. Who wrote 'Cat in the Rain'?</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Ernest Hemingway</div>
+          <div class="mcq-option">B. James Joyce</div>
+          <div class="mcq-option">C. Kate Chopin</div>
+          <div class="mcq-option">D. Guy de Maupassant</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="0" data-cat="story">
+        <div class="mcq-question">Q80. Hemingway's narrative philosophy, evident in 'Cat in the Rain', is known as the:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Iceberg Theory</div>
+          <div class="mcq-option">B. Pyramid Theory</div>
+          <div class="mcq-option">C. Stream of Consciousness</div>
+          <div class="mcq-option">D. Epiphany Method</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="story">
+        <div class="mcq-question">Q81. In 'Cat in the Rain', the cat symbolises the wife's:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Fear of animals</div>
+          <div class="mcq-option">B. Unmet desire for nurturing and identity</div>
+          <div class="mcq-option">C. Wealth</div>
+          <div class="mcq-option">D. Religious faith</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="0" data-cat="story">
+        <div class="mcq-question">Q82. Who wrote 'Araby'?</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. James Joyce</div>
+          <div class="mcq-option">B. Ernest Hemingway</div>
+          <div class="mcq-option">C. Edgar Allan Poe</div>
+          <div class="mcq-option">D. Kate Chopin</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="story">
+        <div class="mcq-question">Q83. 'Araby' is part of which short story collection?</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. The Dead</div>
+          <div class="mcq-option">B. Dubliners</div>
+          <div class="mcq-option">C. Ulysses</div>
+          <div class="mcq-option">D. A Portrait of the Artist</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="story">
+        <div class="mcq-question">Q84. The term for a sudden moment of self-realisation in Joyce's fiction is called a/an:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Climax</div>
+          <div class="mcq-option">B. Epiphany</div>
+          <div class="mcq-option">C. Denouement</div>
+          <div class="mcq-option">D. Catharsis</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="story">
+        <div class="mcq-question">Q85. In 'Araby', the boy's epiphany occurs when he realises:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. He is rich</div>
+          <div class="mcq-option">B. The vanity and falseness of his romantic idealisation</div>
+          <div class="mcq-option">C. His friend has betrayed him</div>
+          <div class="mcq-option">D. The bazaar is dangerous</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="0" data-cat="essay">
+        <div class="mcq-question">Q86. Who wrote 'Of Marriage and Single Life'?</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Francis Bacon</div>
+          <div class="mcq-option">B. Bertrand Russell</div>
+          <div class="mcq-option">C. George Orwell</div>
+          <div class="mcq-option">D. John Stuart Mill</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="essay">
+        <div class="mcq-question">Q87. Bacon argues that married men, compared to single men, are:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. More free for great enterprise</div>
+          <div class="mcq-option">B. Better citizens but less free for great enterprise</div>
+          <div class="mcq-option">C. Always wealthier</div>
+          <div class="mcq-option">D. Never wise</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="essay">
+        <div class="mcq-question">Q88. Bacon's prose style in his essays is best described as:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Casual and conversational</div>
+          <div class="mcq-option">B. Aphoristic and dense</div>
+          <div class="mcq-option">C. Purely emotional</div>
+          <div class="mcq-option">D. Written entirely in verse</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="0" data-cat="essay">
+        <div class="mcq-question">Q89. Who wrote 'A Free Man's Worship'?</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Bertrand Russell</div>
+          <div class="mcq-option">B. Susan Sontag</div>
+          <div class="mcq-option">C. Francis Bacon</div>
+          <div class="mcq-option">D. George Orwell</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="essay">
+        <div class="mcq-question">Q90. Russell's central argument in 'A Free Man's Worship' is that meaning in an indifferent universe must be:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Given by religion alone</div>
+          <div class="mcq-option">B. Freely created by human beings through valuing goodness, beauty, and truth</div>
+          <div class="mcq-option">C. Impossible to achieve</div>
+          <div class="mcq-option">D. Determined by wealth</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="0" data-cat="essay">
+        <div class="mcq-question">Q91. Who wrote 'Shooting an Elephant'?</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. George Orwell</div>
+          <div class="mcq-option">B. Bertrand Russell</div>
+          <div class="mcq-option">C. John Stuart Mill</div>
+          <div class="mcq-option">D. Susan Sontag</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="essay">
+        <div class="mcq-question">Q92. In 'Shooting an Elephant', the narrator works as a:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Schoolteacher</div>
+          <div class="mcq-option">B. Colonial police officer in Burma</div>
+          <div class="mcq-option">C. Doctor</div>
+          <div class="mcq-option">D. Journalist</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="essay">
+        <div class="mcq-question">Q93. The narrator shoots the elephant primarily because:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. It was about to kill him</div>
+          <div class="mcq-option">B. He feared appearing weak before the watching crowd</div>
+          <div class="mcq-option">C. It was ordered by his superior</div>
+          <div class="mcq-option">D. It was already dying</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="essay">
+        <div class="mcq-question">Q94. Orwell's essay concludes that imperialism:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Benefits only the colonised</div>
+          <div class="mcq-option">B. Destroys the freedom of the coloniser as well as the colonised</div>
+          <div class="mcq-option">C. Has no real psychological effects</div>
+          <div class="mcq-option">D. Is entirely justified</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="0" data-cat="essay">
+        <div class="mcq-question">Q95. Who wrote 'On Liberty'?</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. John Stuart Mill</div>
+          <div class="mcq-option">B. Francis Bacon</div>
+          <div class="mcq-option">C. Susan Sontag</div>
+          <div class="mcq-option">D. Bertrand Russell</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="essay">
+        <div class="mcq-question">Q96. Mill's 'harm principle' states that individual liberty can only be restricted to:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Promote religious conformity</div>
+          <div class="mcq-option">B. Prevent harm to others</div>
+          <div class="mcq-option">C. Increase government revenue</div>
+          <div class="mcq-option">D. Enforce social customs</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="essay">
+        <div class="mcq-question">Q97. Mill's concept of the 'tyranny of the majority' refers to:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Government military force</div>
+          <div class="mcq-option">B. Suppression of individuality through social pressure and opinion</div>
+          <div class="mcq-option">C. Foreign invasion</div>
+          <div class="mcq-option">D. Economic recession</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="0" data-cat="essay">
+        <div class="mcq-question">Q98. Who wrote 'Illness as Metaphor'?</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Susan Sontag</div>
+          <div class="mcq-option">B. Kate Chopin</div>
+          <div class="mcq-option">C. Bertrand Russell</div>
+          <div class="mcq-option">D. John Stuart Mill</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="essay">
+        <div class="mcq-question">Q99. Sontag criticises the use of which type of metaphor in describing illness?</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. Agricultural metaphors</div>
+          <div class="mcq-option">B. Military metaphors such as 'battling' disease</div>
+          <div class="mcq-option">C. Religious metaphors only</div>
+          <div class="mcq-option">D. Sports metaphors only</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+
+      <div class="mcq-block" data-correct="1" data-cat="essay">
+        <div class="mcq-question">Q100. Sontag's essay ultimately argues that illness should be understood as:</div>
+        <div class="mcq-options">
+          <div class="mcq-option">A. A moral punishment</div>
+          <div class="mcq-option">B. A purely physical condition, free of stigmatising metaphor</div>
+          <div class="mcq-option">C. A supernatural curse</div>
+          <div class="mcq-option">D. A sign of weak character</div>
+        </div>
+        <div class="mcq-feedback"></div>
+      </div>
+    </div><!-- /mcqList -->
+  </div>
+</div>
+
+<footer class="site-footer">
+  <strong>ENG-201 Study Portal</strong> · 100 Most Important MCQs · Interactive Practice
+</footer>
+
+<script src="../js/main.js"></script>
+<script>
+  document.querySelectorAll('.chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+      const filter = chip.dataset.filter;
+      document.querySelectorAll('.mcq-block').forEach(block => {
+        block.style.display = (filter === 'all' || block.dataset.cat === filter) ? '' : 'none';
+      });
+    });
+  });
+</script>
+</body>
+</html>
