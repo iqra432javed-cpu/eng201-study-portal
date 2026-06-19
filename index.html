@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ENG-201 Study Portal | BS English Semester III</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* ── Hero ── */
+    .hero {
+      background: linear-gradient(135deg, var(--navy) 0%, #1a2e45 60%, #1c3a30 100%);
+      padding: 5rem 2rem 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '❝';
+      position: absolute;
+      top: -1rem; left: 50%;
+      transform: translateX(-50%);
+      font-size: 18rem;
+      color: rgba(201,168,76,.04);
+      font-family: 'Playfair Display', serif;
+      line-height: 1;
+      pointer-events: none;
+    }
+    .hero-eyebrow {
+      font-size: .72rem;
+      font-weight: 600;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+    .hero h1 {
+      color: var(--white);
+      margin-bottom: 1rem;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: var(--gold-light);
+    }
+    .hero-sub {
+      color: rgba(255,255,255,.6);
+      font-size: 1rem;
+      max-width: 520px;
+      margin: 0 auto 2rem;
+    }
+    .hero-meta {
+      display: flex;
+      justify-content: center;
+      gap: .75rem;
+      flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+    }
+    .hero-meta .badge { font-size: .72rem; }
+    .hero-cta {
+      display: inline-flex;
+      gap: .75rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .btn {
+      display: inline-flex; align-items: center; gap: .4rem;
+      padding: .7rem 1.5rem;
+      border-radius: var(--radius);
+      font-size: .88rem;
+      font-weight: 600;
+      letter-spacing: .03em;
+      cursor: pointer;
+      transition: var(--transition);
+      text-decoration: none;
+    }
+    .btn-gold {
+      background: var(--gold);
+      color: var(--navy);
+    }
+    .btn-gold:hover {
+      background: var(--gold-light);
+      color: var(--navy);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(201,168,76,.35);
+    }
+    .btn-outline {
+      border: 1.5px solid rgba(255,255,255,.3);
+      color: var(--white);
+      background: transparent;
+    }
+    .btn-outline:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+      transform: translateY(-2px);
+    }
+
+    /* ── Stats Strip ── */
+    .stats-strip {
+      background: var(--white);
+      border-bottom: 1px solid var(--parchment-dark);
+      padding: 1.25rem 2rem;
+    }
+    .stats-strip .inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 1.5rem;
+      text-align: center;
+    }
+    .stat-item .val {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1;
+    }
+    .stat-item .lbl {
+      font-size: .75rem;
+      color: var(--ink-light);
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      margin-top: .2rem;
+    }
+
+    /* ── Section Modules ── */
+    .modules-section { padding: 3rem 0; }
+
+    .module-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid rgba(0,0,0,.06);
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+    .module-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); }
+
+    .module-card-top {
+      padding: 1.75rem 1.5rem 1.25rem;
+      flex: 1;
+    }
+
+    .module-icon-wrap {
+      width: 52px; height: 52px;
+      border-radius: var(--radius-lg);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .icon-gold  { background: rgba(201,168,76,.12); }
+    .icon-rose  { background: rgba(212,113,106,.12); }
+    .icon-sage  { background: rgba(92,122,95,.12); }
+    .icon-navy  { background: rgba(13,27,42,.08); }
+
+    .module-card h3 {
+      font-size: 1.15rem;
+      margin-bottom: .4rem;
+    }
+    .module-card p {
+      font-size: .88rem;
+      margin-bottom: 0;
+    }
+    .module-card-foot {
+      padding: 1rem 1.5rem;
+      border-top: 1px solid var(--parchment-dark);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .module-card-foot .count {
+      font-size: .78rem;
+      color: var(--ink-light);
+    }
+    .link-arrow {
+      font-size: .85rem;
+      font-weight: 600;
+      color: var(--gold);
+      display: flex; align-items: center; gap: .3rem;
+    }
+    .link-arrow:hover { color: var(--navy); }
+
+    /* ── Syllabus Strip ── */
+    .syllabus-section {
+      background: var(--navy);
+      padding: 3rem 0;
+      margin-top: 1rem;
+    }
+    .syllabus-section h2 { color: var(--white); margin-bottom: .4rem; }
+    .syllabus-section .intro { color: rgba(255,255,255,.55); font-size: .9rem; margin-bottom: 2rem; }
+
+    .syllabus-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    .syl-item {
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: var(--radius);
+      padding: 1rem 1.1rem;
+    }
+    .syl-item .syl-tag {
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: .4rem;
+    }
+    .syl-item p {
+      font-size: .85rem;
+      color: rgba(255,255,255,.7);
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="nav-brand">
+    ENG-201
+    <span>Fictional &amp; Non-fictional Narrative</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="chapters/chapter1.html">Notes</a></li>
+    <li><a href="short-questions/sq.html">Short Q</a></li>
+    <li><a href="long-questions/lq.html">Long Q</a></li>
+    <li><a href="mcqs/mcqs.html">MCQs</a></li>
+  </ul>
+  <div class="nav-toggle"><span></span><span></span><span></span></div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <p class="hero-eyebrow">BS English — Semester III · B.Z. University, Multan</p>
+  <h1>Introduction to <em>Fictional</em><br>&amp; Non-fictional Narrative</h1>
+  <p class="hero-sub">Complete exam preparation — course notes, 50 short questions, 20 long questions, and 100 MCQs covering every examiner-favourite topic.</p>
+  <div class="hero-meta">
+    <span class="badge badge-gold">Course Code: ENG-201</span>
+    <span class="badge badge-sage">Section I &amp; II</span>
+    <span class="badge badge-rose">High-Yield Exam Focus</span>
+  </div>
+  <div class="hero-cta">
+    <a href="chapters/chapter1.html" class="btn btn-gold">📖 Start Reading Notes</a>
+    <a href="mcqs/mcqs.html" class="btn btn-outline">🧠 Practice MCQs</a>
+  </div>
+</section>
+
+<!-- Stats -->
+<div class="stats-strip">
+  <div class="inner">
+    <div class="stat-item"><div class="val">2</div><div class="lbl">Course Sections</div></div>
+    <div class="stat-item"><div class="val">7</div><div class="lbl">Text Chapters</div></div>
+    <div class="stat-item"><div class="val">50</div><div class="lbl">Short Questions</div></div>
+    <div class="stat-item"><div class="val">20</div><div class="lbl">Long Questions</div></div>
+    <div class="stat-item"><div class="val">100</div><div class="lbl">MCQs</div></div>
+  </div>
+</div>
+
+<!-- Modules -->
+<section class="modules-section">
+  <div class="container">
+    <p class="section-label">Study Resources</p>
+    <h2 style="margin-bottom:1.5rem">Everything You Need to Excel</h2>
+    <div class="grid-2">
+
+      <a href="chapters/chapter1.html" style="text-decoration:none">
+        <div class="module-card">
+          <div class="module-card-top">
+            <div class="module-icon-wrap icon-gold">📖</div>
+            <h3>Course Notes</h3>
+            <p>Complete topic-by-topic notes covering POV, tone, theme, fictional forms, novel genres, non-fiction types — with examiner highlights.</p>
+          </div>
+          <div class="module-card-foot">
+            <span class="count">Section I &amp; II · All Texts</span>
+            <span class="link-arrow">Read Notes →</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="short-questions/sq.html" style="text-decoration:none">
+        <div class="module-card">
+          <div class="module-card-top">
+            <div class="module-icon-wrap icon-rose">✍️</div>
+            <h3>50 Short Questions</h3>
+            <p>5-mark questions with model answers. Most frequently repeated in BISE exams — structured for speed and marks.</p>
+          </div>
+          <div class="module-card-foot">
+            <span class="count">50 Questions · 5 marks each</span>
+            <span class="link-arrow">Practice →</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="long-questions/lq.html" style="text-decoration:none">
+        <div class="module-card">
+          <div class="module-card-top">
+            <div class="module-icon-wrap icon-navy">📝</div>
+            <h3>20 Long Questions</h3>
+            <p>10-mark essay-style answers with full outlines. Covers every major text, literary concept, and critical analysis task.</p>
+          </div>
+          <div class="module-card-foot">
+            <span class="count">20 Questions · 10 marks each</span>
+            <span class="link-arrow">Practice →</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="mcqs/mcqs.html" style="text-decoration:none">
+        <div class="module-card">
+          <div class="module-card-top">
+            <div class="module-icon-wrap icon-sage">🧠</div>
+            <h3>100 MCQs</h3>
+            <p>Interactive multiple-choice quiz with instant feedback, score tracking, and correct-answer reveal. High-yield focus.</p>
+          </div>
+          <div class="module-card-foot">
+            <span class="count">100 Questions · Interactive</span>
+            <span class="link-arrow">Start Quiz →</span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- Syllabus -->
+<section class="syllabus-section">
+  <div class="container">
+    <p class="section-label">Course Outline</p>
+    <h2>Syllabus at a Glance</h2>
+    <p class="intro">Both sections of the PTB / B.Z. University ENG-201 course covered in full.</p>
+    <div class="syllabus-grid">
+      <div class="syl-item"><div class="syl-tag">Theory</div><p>Fictional vs Non-fictional Narrative Definitions</p></div>
+      <div class="syl-item"><div class="syl-tag">Theory</div><p>Key Forms: Novel, Short Story, Novella</p></div>
+      <div class="syl-item"><div class="syl-tag">Theory</div><p>Plot, Character, Setting, POV, Theme, Tone &amp; Style</p></div>
+      <div class="syl-item"><div class="syl-tag">Theory</div><p>Novel Genres: Epistolary, Picaresque, Gothic, Postmodern…</p></div>
+      <div class="syl-item"><div class="syl-tag">Theory</div><p>Non-fiction: Essay, Biography, Travelogue, Memoir</p></div>
+      <div class="syl-item"><div class="syl-tag">Novel</div><p>Lord of the Flies · Moth Smoke</p></div>
+      <div class="syl-item"><div class="syl-tag">Short Story</div><p>Story of an Hour · The Necklace · Araby · Usher · Cat in the Rain</p></div>
+      <div class="syl-item"><div class="syl-tag">Essay</div><p>Bacon · Russell · Orwell · Mill · Sontag</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <strong>ENG-201 Study Portal</strong> · Introduction to Fictional &amp; Non-fictional Narrative<br>
+  BS English Semester III · B.Z. University, Multan
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
