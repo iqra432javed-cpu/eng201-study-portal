@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 3: Elements of Fiction | ENG-201</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .toc-list { list-style: none; padding: 0; }
+    .toc-list li { border-bottom: 1px solid var(--parchment-dark); }
+    .toc-list a {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: .5rem .25rem; font-size: .85rem; color: var(--ink-mid);
+      transition: var(--transition);
+    }
+    .toc-list a:hover { color: var(--gold); padding-left: .4rem; }
+    .toc-list .num { color: var(--ink-light); font-size: .75rem; }
+    .key-term {
+      display: inline-block; background: rgba(201,168,76,.1); color: #7A5C10;
+      border: 1px solid rgba(201,168,76,.25); border-radius: 4px;
+      padding: .05rem .45rem; font-size: .85rem; font-weight: 500;
+    }
+    .chapter-nav {
+      display: flex; justify-content: space-between; align-items: center;
+      gap: 1rem; margin-top: 2.5rem; padding-top: 1.5rem;
+      border-top: 1px solid var(--parchment-dark);
+    }
+    .chapter-nav a {
+      display: flex; align-items: center; gap: .5rem;
+      padding: .7rem 1.2rem; border-radius: var(--radius);
+      font-size: .85rem; font-weight: 600;
+      background: var(--white); border: 1.5px solid var(--parchment-dark);
+      color: var(--ink-mid); transition: var(--transition);
+    }
+    .chapter-nav a:hover { border-color: var(--gold); color: var(--navy); }
+    .chapter-badge {
+      display: inline-flex; align-items: center; gap: .4rem;
+      background: rgba(201,168,76,.15); color: #8A6B1A;
+      padding: .3rem .8rem; border-radius: 999px;
+      font-size: .75rem; font-weight: 700; letter-spacing: .04em;
+      margin-bottom: .75rem;
+    }
+    .scholar-box {
+      background: linear-gradient(135deg, rgba(13,27,42,.04), rgba(13,27,42,.01));
+      border: 1px solid rgba(13,27,42,.12);
+      border-radius: var(--radius);
+      padding: 1rem 1.25rem; margin: 1rem 0;
+    }
+    .scholar-box .label {
+      font-size: .7rem; font-weight: 700; letter-spacing: .08em;
+      text-transform: uppercase; color: var(--navy); margin-bottom: .3rem;
+    }
+    .compare-table {
+      width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: .88rem;
+    }
+    .compare-table th {
+      background: var(--navy); color: var(--gold);
+      padding: .6rem .9rem; text-align: left; font-weight: 600; font-size: .8rem;
+    }
+    .compare-table td {
+      padding: .6rem .9rem; border-bottom: 1px solid var(--parchment-dark);
+      color: var(--ink-mid); vertical-align: top;
+    }
+    .compare-table tr:nth-child(even) td { background: var(--parchment); }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-brand">ENG-201 <span>Fictional &amp; Non-fictional Narrative</span></div>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="chapter1.html" class="active">Notes</a></li>
+    <li><a href="../short-questions/sq.html">Short Q</a></li>
+    <li><a href="../long-questions/lq.html">Long Q</a></li>
+    <li><a href="../mcqs/mcqs.html">MCQs</a></li>
+  </ul>
+  <div class="nav-toggle"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="breadcrumb">
+  <a href="../index.html">Home</a><span class="sep">/</span>
+  <a href="chapter1.html">Notes</a><span class="sep">/</span>
+  <span class="current">Chapter 3</span>
+</div>
+
+<div class="page-header">
+  <p class="eyebrow">Chapter 3 of 8 · Section I — Theory</p>
+  <h1>Elements of Fiction</h1>
+  <p>Plot, character, setting, point of view, theme, and style — the architecture of every fictional narrative</p>
+</div>
+
+<div class="container">
+  <div class="page-body">
+    <div class="layout-sidebar">
+
+      <aside class="sidebar">
+        <div class="sidebar-card">
+          <h4>All Chapters</h4>
+          <nav class="sidebar-nav">
+            <a href="chapter1.html">1. Fiction vs Non-fiction</a>
+            <a href="chapter2.html">2. Forms of Fictional Prose</a>
+            <a href="chapter3.html" class="active">3. Elements of Fiction</a>
+            <a href="chapter4.html">4. Novel &amp; Its Genres</a>
+            <a href="chapter5.html">5. Forms of Non-fiction</a>
+            <a href="chapter6.html">6. Novels Studied</a>
+            <a href="chapter7.html">7. Short Stories Studied</a>
+            <a href="chapter8.html">8. Essays Studied</a>
+          </nav>
+        </div>
+        <div class="sidebar-card">
+          <h4>In This Chapter</h4>
+          <nav class="sidebar-nav">
+            <ul class="toc-list">
+              <li><a href="#intro">3.1 Introduction <span class="num">→</span></a></li>
+              <li><a href="#plot">3.2 Plot Structure <span class="num">→</span></a></li>
+              <li><a href="#character">3.3 Character <span class="num">→</span></a></li>
+              <li><a href="#setting">3.4 Setting <span class="num">→</span></a></li>
+              <li><a href="#pov">3.5 Point of View <span class="num">→</span></a></li>
+              <li><a href="#theme">3.6 Theme <span class="num">→</span></a></li>
+              <li><a href="#style">3.7 Style and Tone <span class="num">→</span></a></li>
+              <li><a href="#summary">3.8 Chapter Summary <span class="num">→</span></a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="sidebar-card">
+          <h4>Quick Links</h4>
+          <nav class="sidebar-nav">
+            <a href="../short-questions/sq.html">✍️ Short Questions</a>
+            <a href="../long-questions/lq.html">📝 Long Questions</a>
+            <a href="../mcqs/mcqs.html">🧠 MCQ Quiz</a>
+          </nav>
+        </div>
+      </aside>
+
+      <main>
+
+        <div id="intro" class="note-section">
+          <span class="chapter-badge">📖 Chapter 3</span>
+          <h2>3.1 Introduction</h2>
+          <p>Every work of fictional prose, regardless of length or genre, is constructed from a common set of formal elements. This chapter examines the six elements identified in the ENG-201 syllabus as essential to the analysis of fictional prose: <strong>plot</strong>, <strong>character</strong>, <strong>setting</strong>, <strong>point of view</strong>, <strong>theme</strong>, and <strong>style and tone</strong>. These elements do not operate independently; rather, they interact continuously, such that a change in point of view alters how characterization is perceived, and a shift in setting can reinforce or undercut theme. Mastery of this chapter is essential preparation for both the close-reading questions in Section II and the comparative long questions that ask students to analyse how these elements function across multiple texts.</p>
+
+          <div class="diagram-wrap">
+            <div class="diagram-label">Overview — The Six Elements</div>
+            <svg viewBox="0 0 680 230" role="img">
+              <title>The six key elements of fictional prose narrative</title>
+              <desc>An overview grid of the six elements covered in this chapter: plot structure, character, setting, point of view, theme, and style and tone.</desc>
+              <rect x="20" y="20" width="200" height="56" rx="8" fill="#FAF7F0" stroke="#C9A84C" stroke-width="0.5"/>
+              <text x="120" y="44" text-anchor="middle" font-size="13" font-weight="600" fill="#0D1B2A">Plot Structure</text>
+              <text x="120" y="62" text-anchor="middle" font-size="10.5" fill="#6B7280">Freytag's Pyramid</text>
+
+              <rect x="240" y="20" width="200" height="56" rx="8" fill="#FAF7F0" stroke="#C9A84C" stroke-width="0.5"/>
+              <text x="340" y="44" text-anchor="middle" font-size="13" font-weight="600" fill="#0D1B2A">Character</text>
+              <text x="340" y="62" text-anchor="middle" font-size="10.5" fill="#6B7280">Direct &amp; indirect methods</text>
+
+              <rect x="460" y="20" width="200" height="56" rx="8" fill="#FAF7F0" stroke="#C9A84C" stroke-width="0.5"/>
+              <text x="560" y="44" text-anchor="middle" font-size="13" font-weight="600" fill="#0D1B2A">Setting</text>
+              <text x="560" y="62" text-anchor="middle" font-size="10.5" fill="#6B7280">Time, place, atmosphere</text>
+
+              <rect x="20" y="96" width="200" height="56" rx="8" fill="#FAF7F0" stroke="#C9A84C" stroke-width="0.5"/>
+              <text x="120" y="120" text-anchor="middle" font-size="13" font-weight="600" fill="#0D1B2A">Point of View</text>
+              <text x="120" y="138" text-anchor="middle" font-size="10.5" fill="#6B7280">Narrative perspective</text>
+
+              <rect x="240" y="96" width="200" height="56" rx="8" fill="#FAF7F0" stroke="#C9A84C" stroke-width="0.5"/>
+              <text x="340" y="120" text-anchor="middle" font-size="13" font-weight="600" fill="#0D1B2A">Theme</text>
+              <text x="340" y="138" text-anchor="middle" font-size="10.5" fill="#6B7280">Central insight conveyed</text>
+
+              <rect x="460" y="96" width="200" height="56" rx="8" fill="#FAF7F0" stroke="#C9A84C" stroke-width="0.5"/>
+              <text x="560" y="120" text-anchor="middle" font-size="13" font-weight="600" fill="#0D1B2A">Style &amp; Tone</text>
+              <text x="560" y="138" text-anchor="middle" font-size="10.5" fill="#6B7280">Diction &amp; author's attitude</text>
+
+              <text x="340" y="190" text-anchor="middle" font-size="11.5" fill="#9B3A33">All six interact continuously to construct meaning</text>
+              <line x1="120" y1="76" x2="120" y2="94" stroke="#D6D0C0" stroke-width="0.5"/>
+              <line x1="340" y1="76" x2="340" y2="94" stroke="#D6D0C0" stroke-width="0.5"/>
+              <line x1="560" y1="76" x2="560" y2="94" stroke="#D6D0C0" stroke-width="0.5"/>
+            </svg>
+          </div>
+        </div>
+
+        <div id="plot" class="note-section">
+          <h2>3.2 Plot Structure</h2>
+          <p><span class="key-term">Plot</span> is the structured sequence of events in a narrative, organised by causation rather than mere chronology. Aristotle's distinction is again instructive here: he distinguished <em>mythos</em> (plot, the arrangement of incidents) from the raw material of events, arguing that plot is the "soul" of tragedy because it is through the deliberate arrangement of cause and effect that meaning is generated. A plot is not simply "what happens" but "what happens, and why, in what order, and to what effect."</p>
+
+          <h3>3.2.1 Freytag's Pyramid</h3>
+          <p>The German novelist and critic Gustav Freytag proposed in <em>Die Technik des Dramas</em> (1863) a five-part model of dramatic structure, subsequently applied widely to prose fiction. The five stages are:</p>
+          <ul>
+            <li><strong>Exposition:</strong> Introduces setting, characters, and the initial situation before conflict emerges.</li>
+            <li><strong>Rising Action:</strong> A series of complications that intensify conflict and build tension.</li>
+            <li><strong>Climax:</strong> The turning point of maximum tension, after which the outcome becomes inevitable.</li>
+            <li><strong>Falling Action:</strong> The unspooling of consequences that follow the climax.</li>
+            <li><strong>Denouement (Resolution):</strong> The final state of equilibrium, whether resolved or tragically unresolved.</li>
+          </ul>
+
+          <div class="diagram-wrap">
+            <div class="diagram-label">Diagram — Freytag's Pyramid</div>
+            <svg viewBox="0 0 680 290" role="img">
+              <title>Freytag's Pyramid showing the five stages of plot</title>
+              <desc>A mountain-shaped diagram rising from exposition through rising action to a climax peak, then descending through falling action to denouement.</desc>
+              <line x1="50" y1="230" x2="630" y2="230" stroke="#D6D0C0" stroke-width="1"/>
+              <polyline points="50,210 220,210 340,60 460,210 630,210" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+              <circle cx="50" cy="210" r="4" fill="#0D1B2A"/>
+              <circle cx="220" cy="210" r="4" fill="#0D1B2A"/>
+              <circle cx="340" cy="60" r="5" fill="#D4716A"/>
+              <circle cx="460" cy="210" r="4" fill="#0D1B2A"/>
+              <circle cx="630" cy="210" r="4" fill="#0D1B2A"/>
+              <text x="340" y="42" text-anchor="middle" font-size="13" font-weight="600" fill="#9B3A33">Climax</text>
+              <text x="340" y="252" text-anchor="middle" font-size="11" fill="#6B7280">Turning point — highest tension</text>
+              <text x="80" y="252" text-anchor="middle" font-size="13" font-weight="600" fill="#0D1B2A">Exposition</text>
+              <text x="80" y="268" text-anchor="middle" font-size="10.5" fill="#6B7280">Setup &amp; intro</text>
+              <text x="240" y="195" text-anchor="middle" font-size="13" font-weight="600" fill="#0D1B2A">Rising Action</text>
+              <text x="240" y="180" text-anchor="middle" font-size="10.5" fill="#6B7280">Conflict builds</text>
+              <text x="420" y="195" text-anchor="middle" font-size="13" font-weight="600" fill="#0D1B2A">Falling Action</text>
+              <text x="420" y="180" text-anchor="middle" font-size="10.5" fill="#6B7280">Consequences unfold</text>
+              <text x="600" y="252" text-anchor="middle" font-size="13" font-weight="600" fill="#0D1B2A">Denouement</text>
+              <text x="600" y="268" text-anchor="middle" font-size="10.5" fill="#6B7280">Resolution</text>
+            </svg>
+          </div>
+
+          <h3>3.2.2 Beyond Freytag: Plot in Non-Linear Fiction</h3>
+          <p>While Freytag's model remains pedagogically useful, students should understand its limits when analysing more complex narrative structures. <em>Moth Smoke</em>, for instance, does not unfold in simple chronological sequence; its trial-frame structure means the reader receives the "climax" (Daru's alleged crime) only gradually, reconstructed through fragmented testimony. Such structures are sometimes described using the Russian Formalist distinction between <em>fabula</em> (the chronological sequence of events as they "really" occurred in the storyworld) and <em>syuzhet</em> (the order in which those events are actually presented to the reader). A sophisticated long-question answer on plot should be able to invoke this distinction when discussing non-linear texts.</p>
+
+          <div class="examiner-tip">
+            <div class="label">🎯 Examiner Tip</div>
+            <p>When asked to apply Freytag's Pyramid to <em>Lord of the Flies</em>, identify the climax precisely: most examiners accept either Simon's murder (the moral climax) or the final hunt for Ralph (the structural climax). Naming both and explaining the distinction demonstrates advanced understanding.</p>
+          </div>
+        </div>
+
+        <div id="character" class="note-section">
+          <h2>3.3 Character and Characterization</h2>
+          <p><span class="key-term">Characterization</span> is the set of techniques an author uses to construct and reveal character. The distinction between <strong>direct (explicit)</strong> and <strong>indirect (dramatic)</strong> characterization, originating in classical rhetoric and refined by modern narratology, remains the most examinable framework in this area.</p>
+
+          <h3>3.3.1 Methods of Characterization</h3>
+          <ul>
+            <li><strong>Direct characterization:</strong> The narrator explicitly states a character's traits ("Piggy was fat and wheezed").</li>
+            <li><strong>Indirect characterization:</strong> Traits are revealed through speech, action, thought, appearance, and the reactions of others — requiring active interpretive work from the reader.</li>
+          </ul>
+
+          <h3>3.3.2 E. M. Forster's Round and Flat Characters</h3>
+          <p>In <em>Aspects of the Novel</em> (1927), E. M. Forster proposed the influential distinction between <strong>round characters</strong>, who are complex, psychologically multidimensional, and "capable of surprising in a convincing way," and <strong>flat characters</strong>, who are constructed around a single dominant trait or function and do not develop. Forster did not consider flat characters inferior — they serve important structural and comic functions — but he reserved his highest praise for the novel's capacity to render genuinely round human consciousness.</p>
+          <p>Applying this framework: Daru in <em>Moth Smoke</em> is a round character whose moral complexity resists easy judgement, while many of the boys in <em>Lord of the Flies</em> beyond the central five (Ralph, Jack, Piggy, Simon, Roger) function as a relatively flat, undifferentiated "chorus" representing the broader social body.</p>
+
+          <h3>3.3.3 Dynamic and Static Characters</h3>
+          <p>A further distinction concerns change over time: a <strong>dynamic character</strong> undergoes significant internal transformation across the narrative (Jack's transformation from choirboy to tribal leader), while a <strong>static character</strong> remains essentially unchanged (Piggy's rationalism is constant from beginning to end, which is itself thematically significant — his failure to adapt contributes to his marginalisation and death).</p>
+
+          <div class="highlight-box">
+            <div class="label">⭐ Examiner Favourite</div>
+            <p>"Differentiate between round and flat characters, with reference to a course text" is a recurring short question. Always cite Forster by name and provide one example of each type from a named text.</p>
+          </div>
+        </div>
+
+        <div id="setting" class="note-section">
+          <h2>3.4 Setting</h2>
+          <p><span class="key-term">Setting</span> comprises the time, place, and social/cultural environment within which a narrative unfolds. Setting is frequently underestimated by students as a passive "backdrop," but in sophisticated fiction it performs active structural and thematic work.</p>
+
+          <h3>3.4.1 Functions of Setting</h3>
+          <ul>
+            <li><strong>Atmosphere:</strong> The decaying mansion in "The Fall of the House of Usher" generates Gothic dread before a single plot event occurs.</li>
+            <li><strong>Symbolic reinforcement:</strong> The isolated island in <em>Lord of the Flies</em> functions as a controlled "laboratory" setting, removing external social structures so that Golding can isolate his variable of interest — human nature without civilisation's restraints.</li>
+            <li><strong>Social/historical grounding:</strong> Lahore in 1998, with the nuclear tests as backdrop, grounds <em>Moth Smoke</em>'s class critique in a specific, legible historical moment.</li>
+            <li><strong>Psychological projection:</strong> In Poe's fiction, setting frequently externalises a character's interior state — the cracked, decaying Usher mansion mirrors Roderick Usher's disintegrating mind.</li>
+          </ul>
+
+          <div class="scholar-box">
+            <div class="label">Theoretical Note</div>
+            <p>The concept of the <strong>chronotope</strong>, developed by Russian theorist Mikhail Bakhtin, describes the intrinsic connectedness of temporal and spatial relationships in literature — the idea that time and space are not separable backdrop elements but are fused into a single artistic whole that shapes the kinds of events and characters a narrative can contain. The island chronotope of <em>Lord of the Flies</em>, for example, is generically linked to the adventure and "desert island" tradition it both invokes and subverts.</p>
+          </div>
+        </div>
+
+        <div id="pov" class="note-section">
+          <h2>3.5 Point of View (POV)</h2>
+          <p><span class="key-term">Point of view</span> is the perspective from which a narrative is presented to the reader, determining what information is available, how it is filtered, and with whom the reader is invited to identify. POV is arguably the single most consequential technical choice an author makes, since it controls the reader's epistemic access to the storyworld.</p>
+
+          <h3>3.5.1 The Major Categories</h3>
+          <ul>
+            <li><strong>First person:</strong> A character-narrator uses "I," offering subjective intimacy but inherently limited and potentially biased knowledge.</li>
+            <li><strong>Second person:</strong> The rare use of "you," which can create unusual intimacy or directly implicate the reader, as in certain chapters of <em>Moth Smoke</em>.</li>
+            <li><strong>Third person limited:</strong> An external narrator restricts access to a single character's consciousness.</li>
+            <li><strong>Third person omniscient:</strong> An external narrator has unrestricted access to all characters' thoughts and feelings, as well as authority to comment on events — the mode Golding uses throughout <em>Lord of the Flies</em>.</li>
+          </ul>
+
+          <div class="diagram-wrap">
+            <div class="diagram-label">Diagram — Point of View Spectrum</div>
+            <svg viewBox="0 0 680 220" role="img">
+              <title>Spectrum of narrative point of view from first person to third person omniscient</title>
+              <desc>A horizontal spectrum showing four points of view ordered by narrative distance.</desc>
+              <defs>
+                <marker id="arrowpovc3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker>
+              </defs>
+              <line x1="60" y1="60" x2="620" y2="60" stroke="#C9A84C" stroke-width="2" marker-end="url(#arrowpovc3)"/>
+              <circle cx="90" cy="60" r="6" fill="#D4716A"/>
+              <circle cx="260" cy="60" r="6" fill="#0D1B2A"/>
+              <circle cx="430" cy="60" r="6" fill="#0D1B2A"/>
+              <circle cx="600" cy="60" r="6" fill="#5C7A5F"/>
+              <text x="90" y="95" text-anchor="middle" font-size="13" font-weight="600" fill="#0D1B2A">First Person</text>
+              <text x="90" y="112" text-anchor="middle" font-size="10.5" fill="#6B7280">"I" — subjective</text>
+              <text x="90" y="127" text-anchor="middle" font-size="10.5" fill="#9B3A33">Moth Smoke</text>
+              <text x="260" y="95" text-anchor="middle" font-size="13" font-weight="600" fill="#0D1B2A">Second Person</text>
+              <text x="260" y="112" text-anchor="middle" font-size="10.5" fill="#6B7280">"You" — implicating</text>
+              <text x="430" y="95" text-anchor="middle" font-size="13" font-weight="600" fill="#0D1B2A">Third Limited</text>
+              <text x="430" y="112" text-anchor="middle" font-size="10.5" fill="#6B7280">Focus on one mind</text>
+              <text x="600" y="95" text-anchor="middle" font-size="13" font-weight="600" fill="#0D1B2A">Third Omniscient</text>
+              <text x="600" y="112" text-anchor="middle" font-size="10.5" fill="#6B7280">All-knowing narrator</text>
+              <text x="600" y="127" text-anchor="middle" font-size="10.5" fill="#2E5430">Lord of the Flies</text>
+              <text x="90" y="35" text-anchor="middle" font-size="10.5" fill="#9B3A33" font-weight="600">most subjective</text>
+              <text x="600" y="35" text-anchor="middle" font-size="10.5" fill="#2E5430" font-weight="600">most distant</text>
+              <rect x="40" y="160" width="600" height="42" rx="6" fill="#FAF7F0" stroke="#D4716A" stroke-width="0.5"/>
+              <text x="60" y="186" font-size="11.5" fill="#0D1B2A">An <tspan font-style="italic">unreliable narrator</tspan> can occur at any point on this spectrum.</text>
+            </svg>
+          </div>
+
+          <h3>3.5.2 The Unreliable Narrator</h3>
+          <p>An <strong>unreliable narrator</strong> is a narrating voice whose account the reader has reason to distrust, whether due to limited knowledge, psychological instability, self-interest, or deliberate deception. Wayne Booth, in <em>The Rhetoric of Fiction</em> (1961), distinguished such narrators by the degree to which they diverge from the "implied author's" norms — the reader senses a gap between what the narrator claims and what the text, through irony or contradiction, reveals to be true. Daru's self-justifying first-person account in <em>Moth Smoke</em> is the course's central example: his narration consistently minimises his own culpability while emphasising his victimhood, a discrepancy the novel's multi-voiced structure exposes by juxtaposing his account against others'.</p>
+
+          <div class="examiner-tip">
+            <div class="label">🎯 Examiner Tip</div>
+            <p>Do not confuse "first person" with "unreliable" — they are independent variables. A first-person narrator can be entirely trustworthy, and in rare cases even a third-person narrator can mislead through selective omission. Always justify unreliability with specific textual evidence (contradiction, self-interest, or limited knowledge), not simply because the narrator speaks in "I."</p>
+          </div>
+        </div>
+
+        <div id="theme" class="note-section">
+          <h2>3.6 Theme</h2>
+          <p><span class="key-term">Theme</span> is the central insight, concern, or argument a literary work develops about human experience, society, or existence. Theme should be distinguished carefully from both subject matter (what a text is "about" on the surface) and moral (a simple didactic lesson). A theme is typically best articulated as a statement or proposition rather than a single word: not simply "civilisation," but "civilisation is a fragile social construct that can collapse rapidly once external authority is removed, revealing an innate human capacity for savagery."</p>
+
+          <h3>3.6.1 How Theme Is Constructed</h3>
+          <p>Theme rarely appears as direct authorial statement (with non-fictional essays being a partial exception); rather, it is constructed cumulatively through plot outcomes, character arcs, symbolism, and patterns of imagery. In <em>Lord of the Flies</em>, theme emerges through the symbolic trajectory of the conch shell (intact → cracked → destroyed) tracking the parallel collapse of civilised order.</p>
+
+          <h3>3.6.2 Major Course Themes</h3>
+          <table class="compare-table">
+            <tr><th>Text</th><th>Central Theme(s)</th></tr>
+            <tr><td><em>Lord of the Flies</em></td><td>Civilisation vs. savagery; the innateness of human evil; failure of reason without enforced structure</td></tr>
+            <tr><td><em>Moth Smoke</em></td><td>Class inequality and elite impunity; moral ambiguity; contested truth in a corrupt society</td></tr>
+            <tr><td>"Story of an Hour"</td><td>Female confinement within marriage; the irony of freedom found in death</td></tr>
+            <tr><td>"Shooting an Elephant"</td><td>The corrupting psychological cost of imperial power on coloniser and colonised alike</td></tr>
+          </table>
+
+          <div class="highlight-box">
+            <div class="label">⭐ Examiner Favourite</div>
+            <p>Long questions frequently ask students to "discuss the central theme" of a text. Always state the theme as a complete proposition (not a single word), then trace its development through at least three specific textual moments or symbols.</p>
+          </div>
+        </div>
+
+        <div id="style" class="note-section">
+          <h2>3.7 Style and Tone</h2>
+          <p><span class="key-term">Style</span> refers to an author's characteristic and distinctive use of language — diction (word choice), syntax (sentence construction), imagery, and rhetorical devices. <span class="key-term">Tone</span> refers more specifically to the author's or narrator's attitude toward the subject matter, conveyed through these same stylistic choices.</p>
+
+          <h3>3.7.1 Distinguishing Tone from Mood</h3>
+          <p>Students frequently conflate tone with <strong>mood</strong>, but the two are conceptually distinct: tone originates with the author/narrator (their attitude), while mood is the emotional atmosphere experienced by the reader. A text can have an ironic tone (Chopin's narrative stance toward Louise Mallard's "tragedy") that produces a complex, unsettled mood in the reader — simultaneously sympathetic and quietly subversive.</p>
+
+          <h3>3.7.2 Style as Analytical Evidence</h3>
+          <p>At university level, style should never be discussed in the abstract ("the author's style is good") but always demonstrated through close reading of specific linguistic choices. Compare three contrasting styles studied in this course:</p>
+          <ul>
+            <li><strong>Orwell:</strong> Plain, concrete, declarative diction; short, direct sentences; a confessional first-person tone that creates an effect of unflinching honesty even while documenting moral failure.</li>
+            <li><strong>Poe:</strong> Dense, ornate, Latinate diction; long, syntactically complex sentences with extensive subordination, mirroring the suffocating, claustrophobic atmosphere of his Gothic settings.</li>
+            <li><strong>Hemingway:</strong> Sparse, paratactic prose (short independent clauses joined with minimal subordination); deliberate omission of emotional commentary, in line with his Iceberg Theory (Chapter 2).</li>
+          </ul>
+
+          <div class="examiner-tip">
+            <div class="label">🎯 Examiner Tip</div>
+            <p>For style/tone questions, quote or closely paraphrase a brief stylistic feature (sentence length, diction register, a specific rhetorical device) rather than offering vague praise. Examiners reward textual specificity far more than general adjectives like "beautiful" or "powerful."</p>
+          </div>
+        </div>
+
+        <div id="summary" class="note-section" style="border-left-color: var(--sage)">
+          <h2>3.8 Chapter Summary</h2>
+          <ul>
+            <li>Plot is the causally structured arrangement of events; Freytag's Pyramid (exposition, rising action, climax, falling action, denouement) remains the standard model, though non-linear texts like <em>Moth Smoke</em> require the fabula/syuzhet distinction.</li>
+            <li>Characterization operates through direct and indirect methods; Forster's round/flat distinction and the dynamic/static distinction are essential analytical tools.</li>
+            <li>Setting performs active thematic and psychological work, not merely passive backdrop; Bakhtin's "chronotope" formalises the fusion of time and space in narrative meaning.</li>
+            <li>Point of view governs the reader's epistemic access; the unreliable narrator (Booth) creates a gap between narration and implied truth.</li>
+            <li>Theme is best articulated as a full proposition, constructed cumulatively through plot, symbol, and character rather than stated directly.</li>
+            <li>Style (linguistic choices) and tone (attitude conveyed through those choices) must be distinguished from mood (the reader's emotional response) and demonstrated through specific textual evidence.</li>
+          </ul>
+        </div>
+
+        <div class="chapter-nav">
+          <a href="chapter2.html">← Chapter 2: Forms of Fictional Prose</a>
+          <a href="chapter4.html">Chapter 4: The Novel &amp; Its Genres →</a>
+        </div>
+
+      </main>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <strong>ENG-201 Study Portal</strong> · Chapter 3 of 8 · Fictional &amp; Non-fictional Narrative
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
