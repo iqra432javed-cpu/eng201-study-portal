@@ -3,38 +3,67 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Course Notes | ENG-201</title>
+  <title>Chapter 1: Fictional vs Non-fictional Narrative | ENG-201</title>
   <link rel="stylesheet" href="../css/style.css" />
   <style>
     .toc-list { list-style: none; padding: 0; }
     .toc-list li { border-bottom: 1px solid var(--parchment-dark); }
     .toc-list a {
       display: flex; align-items: center; justify-content: space-between;
-      padding: .5rem .25rem;
-      font-size: .85rem;
-      color: var(--ink-mid);
+      padding: .5rem .25rem; font-size: .85rem; color: var(--ink-mid);
       transition: var(--transition);
     }
     .toc-list a:hover { color: var(--gold); padding-left: .4rem; }
     .toc-list .num { color: var(--ink-light); font-size: .75rem; }
     .key-term {
-      display: inline-block;
-      background: rgba(201,168,76,.1);
-      color: #7A5C10;
-      border: 1px solid rgba(201,168,76,.25);
-      border-radius: 4px;
-      padding: .05rem .45rem;
-      font-size: .85rem;
-      font-weight: 500;
+      display: inline-block; background: rgba(201,168,76,.1); color: #7A5C10;
+      border: 1px solid rgba(201,168,76,.25); border-radius: 4px;
+      padding: .05rem .45rem; font-size: .85rem; font-weight: 500;
     }
-    .text-row {
-      display: grid;
-      grid-template-columns: auto 1fr;
-      gap: .4rem .75rem;
-      align-items: start;
-      margin-bottom: .35rem;
+    .chapter-nav {
+      display: flex; justify-content: space-between; align-items: center;
+      gap: 1rem; margin-top: 2.5rem; padding-top: 1.5rem;
+      border-top: 1px solid var(--parchment-dark);
     }
-    .text-row .author { font-size: .8rem; color: var(--ink-light); }
+    .chapter-nav a {
+      display: flex; align-items: center; gap: .5rem;
+      padding: .7rem 1.2rem; border-radius: var(--radius);
+      font-size: .85rem; font-weight: 600;
+      background: var(--white); border: 1.5px solid var(--parchment-dark);
+      color: var(--ink-mid); transition: var(--transition);
+    }
+    .chapter-nav a:hover { border-color: var(--gold); color: var(--navy); }
+    .chapter-nav .disabled { opacity: .35; pointer-events: none; }
+    .chapter-badge {
+      display: inline-flex; align-items: center; gap: .4rem;
+      background: rgba(201,168,76,.15); color: #8A6B1A;
+      padding: .3rem .8rem; border-radius: 999px;
+      font-size: .75rem; font-weight: 700; letter-spacing: .04em;
+      margin-bottom: .75rem;
+    }
+    .scholar-box {
+      background: linear-gradient(135deg, rgba(13,27,42,.04), rgba(13,27,42,.01));
+      border: 1px solid rgba(13,27,42,.12);
+      border-radius: var(--radius);
+      padding: 1rem 1.25rem;
+      margin: 1rem 0;
+    }
+    .scholar-box .label {
+      font-size: .7rem; font-weight: 700; letter-spacing: .08em;
+      text-transform: uppercase; color: var(--navy); margin-bottom: .3rem;
+    }
+    .compare-table {
+      width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: .88rem;
+    }
+    .compare-table th {
+      background: var(--navy); color: var(--gold);
+      padding: .6rem .9rem; text-align: left; font-weight: 600; font-size: .8rem;
+    }
+    .compare-table td {
+      padding: .6rem .9rem; border-bottom: 1px solid var(--parchment-dark);
+      color: var(--ink-mid); vertical-align: top;
+    }
+    .compare-table tr:nth-child(even) td { background: var(--parchment); }
   </style>
 </head>
 <body>
@@ -52,15 +81,15 @@
 </nav>
 
 <div class="breadcrumb">
-  <a href="../index.html">Home</a>
-  <span class="sep">/</span>
-  <span class="current">Course Notes</span>
+  <a href="../index.html">Home</a><span class="sep">/</span>
+  <a href="chapter1.html">Notes</a><span class="sep">/</span>
+  <span class="current">Chapter 1</span>
 </div>
 
 <div class="page-header">
-  <p class="eyebrow">ENG-201 · Section I &amp; II</p>
-  <h1>Complete Course Notes</h1>
-  <p>Full coverage of all topics — Theory &amp; Texts — with examiner-favourite highlights</p>
+  <p class="eyebrow">Chapter 1 of 8 · Section I — Theory</p>
+  <h1>Fictional vs Non-fictional Narrative</h1>
+  <p>Foundational definitions, theoretical distinctions, and the philosophical boundary between invented and real narrative</p>
 </div>
 
 <div class="container">
@@ -70,19 +99,29 @@
       <!-- Sidebar -->
       <aside class="sidebar">
         <div class="sidebar-card">
-          <h4>Table of Contents</h4>
+          <h4>All Chapters</h4>
+          <nav class="sidebar-nav">
+            <a href="chapter1.html" class="active">1. Fiction vs Non-fiction</a>
+            <a href="chapter2.html">2. Forms of Fictional Prose</a>
+            <a href="chapter3.html">3. Elements of Fiction</a>
+            <a href="chapter4.html">4. Novel &amp; Its Genres</a>
+            <a href="chapter5.html">5. Forms of Non-fiction</a>
+            <a href="chapter6.html">6. Novels Studied</a>
+            <a href="chapter7.html">7. Short Stories Studied</a>
+            <a href="chapter8.html">8. Essays Studied</a>
+          </nav>
+        </div>
+        <div class="sidebar-card">
+          <h4>In This Chapter</h4>
           <nav class="sidebar-nav">
             <ul class="toc-list">
-              <li><a href="#sec1">Section I: Theory <span class="num">→</span></a></li>
-              <li><a href="#narrative">1. Narrative Types <span class="num">→</span></a></li>
-              <li><a href="#fictional-forms">2. Fictional Forms <span class="num">→</span></a></li>
-              <li><a href="#elements">3. Key Elements <span class="num">→</span></a></li>
-              <li><a href="#novel-genres">4. Novel Genres <span class="num">→</span></a></li>
-              <li><a href="#nonfiction">5. Non-fiction Forms <span class="num">→</span></a></li>
-              <li><a href="#sec2">Section II: Texts <span class="num">→</span></a></li>
-              <li><a href="#novels">6. Novels <span class="num">→</span></a></li>
-              <li><a href="#stories">7. Short Stories <span class="num">→</span></a></li>
-              <li><a href="#essays">8. Essays <span class="num">→</span></a></li>
+              <li><a href="#intro">1.1 Introduction <span class="num">→</span></a></li>
+              <li><a href="#fictional-def">1.2 Fictional Narrative <span class="num">→</span></a></li>
+              <li><a href="#nonfictional-def">1.3 Non-fictional Narrative <span class="num">→</span></a></li>
+              <li><a href="#distinctions">1.4 Key Distinctions <span class="num">→</span></a></li>
+              <li><a href="#blurred">1.5 The Blurred Boundary <span class="num">→</span></a></li>
+              <li><a href="#why-matters">1.6 Why This Matters <span class="num">→</span></a></li>
+              <li><a href="#summary">1.7 Chapter Summary <span class="num">→</span></a></li>
             </ul>
           </nav>
         </div>
@@ -99,523 +138,153 @@
       <!-- Main Content -->
       <main>
 
-        <!-- ═══ SECTION I ═══ -->
-        <div id="sec1" class="note-section">
-          <p class="section-label">Section I</p>
-          <h2>Theory of Narrative</h2>
-          <p>This section covers the foundational theoretical concepts required for ENG-201. Examiners consistently draw short and long questions from these definitions and distinctions.</p>
-        </div>
-
-        <!-- ── 1. Narrative Types ── -->
-        <div id="narrative" class="note-section">
-          <h2>1. Fictional vs Non-fictional Narrative</h2>
-
-          <div class="highlight-box">
-            <div class="label">⭐ Examiner Favourite — Define &amp; Distinguish</div>
-            <p>The most frequently asked question in ENG-201 exams. Know both definitions precisely and have at least two distinguishing points.</p>
-          </div>
+        <div id="intro" class="note-section">
+          <span class="chapter-badge">📖 Chapter 1</span>
+          <h2>1.1 Introduction</h2>
+          <p>Every piece of writing a reader encounters falls, broadly, into one of two great families of narrative: the <strong>fictional</strong> and the <strong>non-fictional</strong>. This distinction is not a modern invention — it stretches back to Aristotle's <em>Poetics</em>, where he separated history (which tells "what has happened") from poetry, or imaginative literature (which tells "what may happen," that is, what is possible according to probability or necessity). Aristotle's insight remains the seed of the entire distinction we study in this chapter: history and non-fiction are bound to the actual; fiction is bound to the possible.</p>
+          <p>Understanding this distinction is the single most important theoretical foundation of ENG-201. Almost every other concept in this course — point of view, characterization, theme, the forms of the novel, the forms of the essay — depends on first understanding whether a text is operating within the fictional mode or the non-fictional mode, because the two modes carry different obligations to the reader, different relationships to truth, and different aesthetic strategies.</p>
+          <p>This chapter develops a precise, examinable definition of both categories, lays out the criteria by which texts are sorted into one or the other, and — crucially for a university-level treatment — interrogates the limits of the distinction itself. As we shall see in Section 1.5, the boundary between fiction and non-fiction is not as stable as introductory treatments suggest, and a sophisticated answer in examination should always acknowledge this nuance.</p>
 
           <div class="diagram-wrap">
-            <div class="diagram-label">Diagram — Fiction vs Non-fiction at a Glance</div>
-            <svg viewBox="0 0 680 300" role="img">
-              <title>Comparison of fictional and non-fictional narrative</title>
-              <desc>A side-by-side diagram contrasting fictional narrative (imagined events, artistic purpose, forms include novel, novella, short story) with non-fictional narrative (real events, informative purpose, forms include essay, biography, travelogue, memoir).</desc>
+            <div class="diagram-label">Diagram — The Narrative Spectrum</div>
+            <svg viewBox="0 0 680 200" role="img">
+              <title>The narrative spectrum from pure fact to pure invention</title>
+              <desc>A horizontal spectrum showing non-fictional narrative forms such as history, biography, and reportage anchored at the factual end, fictional narrative forms such as the novel and short story anchored at the invented end, with creative non-fiction and autofiction occupying the contested middle ground.</desc>
               <defs>
-                <marker id="arrow1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker>
+                <marker id="arrowc1a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker>
               </defs>
-
-              <rect x="40" y="20" width="280" height="46" rx="8" fill="#0D1B2A"/>
-              <text x="180" y="48" text-anchor="middle" fill="#C9A84C" font-size="15" font-weight="600">Fictional Narrative</text>
-
-              <rect x="360" y="20" width="280" height="46" rx="8" fill="#0D1B2A"/>
-              <text x="500" y="48" text-anchor="middle" fill="#C9A84C" font-size="15" font-weight="600">Non-fictional Narrative</text>
-
-              <rect x="40" y="84" width="280" height="50" rx="6" fill="#FAF7F0" stroke="#C9A84C" stroke-width="0.5"/>
-              <text x="180" y="104" text-anchor="middle" font-size="13" font-weight="600" fill="#0D1B2A">Imagined / invented</text>
-              <text x="180" y="122" text-anchor="middle" font-size="11" fill="#6B7280">events &amp; characters</text>
-
-              <rect x="360" y="84" width="280" height="50" rx="6" fill="#FAF7F0" stroke="#C9A84C" stroke-width="0.5"/>
-              <text x="500" y="104" text-anchor="middle" font-size="13" font-weight="600" fill="#0D1B2A">Real / verifiable</text>
-              <text x="500" y="122" text-anchor="middle" font-size="11" fill="#6B7280">events &amp; people</text>
-
-              <rect x="40" y="148" width="280" height="50" rx="6" fill="#FAF7F0" stroke="#C9A84C" stroke-width="0.5"/>
-              <text x="180" y="168" text-anchor="middle" font-size="13" font-weight="600" fill="#0D1B2A">Purpose: entertain</text>
-              <text x="180" y="186" text-anchor="middle" font-size="11" fill="#6B7280">explore human condition</text>
-
-              <rect x="360" y="148" width="280" height="50" rx="6" fill="#FAF7F0" stroke="#C9A84C" stroke-width="0.5"/>
-              <text x="500" y="168" text-anchor="middle" font-size="13" font-weight="600" fill="#0D1B2A">Purpose: inform, argue</text>
-              <text x="500" y="186" text-anchor="middle" font-size="11" fill="#6B7280">record, reflect</text>
-
-              <rect x="40" y="212" width="280" height="50" rx="6" fill="#FAF7F0" stroke="#C9A84C" stroke-width="0.5"/>
-              <text x="180" y="232" text-anchor="middle" font-size="13" font-weight="600" fill="#0D1B2A">Forms</text>
-              <text x="180" y="250" text-anchor="middle" font-size="11" fill="#6B7280">Novel · Novella · Short Story</text>
-
-              <rect x="360" y="212" width="280" height="50" rx="6" fill="#FAF7F0" stroke="#C9A84C" stroke-width="0.5"/>
-              <text x="500" y="232" text-anchor="middle" font-size="13" font-weight="600" fill="#0D1B2A">Forms</text>
-              <text x="500" y="250" text-anchor="middle" font-size="11" fill="#6B7280">Essay · Biography · Travelogue · Memoir</text>
-
-              <line x1="320" y1="105" x2="358" y2="105" stroke="#D4716A" stroke-width="1" marker-end="url(#arrow1)" opacity="0.4"/>
-              <text x="339" y="285" text-anchor="middle" font-size="11" fill="#9B3A33">Blurred by creative non-fiction &amp; autofiction</text>
+              <line x1="50" y1="70" x2="630" y2="70" stroke="#C9A84C" stroke-width="2" marker-end="url(#arrowc1a)"/>
+              <circle cx="80" cy="70" r="6" fill="#5C7A5F"/>
+              <circle cx="340" cy="70" r="6" fill="#D4716A"/>
+              <circle cx="600" cy="70" r="6" fill="#0D1B2A"/>
+              <text x="80" y="105" text-anchor="middle" font-size="13" font-weight="600" fill="#2E5430">Non-fiction</text>
+              <text x="80" y="122" text-anchor="middle" font-size="10.5" fill="#6B7280">History, biography</text>
+              <text x="80" y="137" text-anchor="middle" font-size="10.5" fill="#6B7280">reportage</text>
+              <text x="340" y="105" text-anchor="middle" font-size="13" font-weight="600" fill="#9B3A33">Contested middle</text>
+              <text x="340" y="122" text-anchor="middle" font-size="10.5" fill="#6B7280">Creative non-fiction</text>
+              <text x="340" y="137" text-anchor="middle" font-size="10.5" fill="#6B7280">autofiction, memoir</text>
+              <text x="600" y="105" text-anchor="middle" font-size="13" font-weight="600" fill="#0D1B2A">Fiction</text>
+              <text x="600" y="122" text-anchor="middle" font-size="10.5" fill="#6B7280">Novel, novella</text>
+              <text x="600" y="137" text-anchor="middle" font-size="10.5" fill="#6B7280">short story</text>
+              <text x="80" y="40" text-anchor="middle" font-size="10.5" fill="#2E5430" font-weight="600">bound to the actual</text>
+              <text x="600" y="40" text-anchor="middle" font-size="10.5" fill="#0D1B2A" font-weight="600">bound to the possible</text>
             </svg>
           </div>
-
-          <h3>Fictional Narrative</h3>
-          <p>A <span class="key-term">fictional narrative</span> is an imaginative account of events, characters, and settings created by the author's imagination. Although it may draw on real experiences, the core content is invented. Fiction aims to entertain, explore human experience, and convey deeper truths through invented stories.</p>
-          <ul>
-            <li>Events are imagined, not factually verified</li>
-            <li>Characters are created (though may be based on real people)</li>
-            <li>Primary purpose: artistic expression, entertainment, exploration of human condition</li>
-            <li>Forms: Novel, Novella, Short Story</li>
-          </ul>
-
-          <h3>Non-fictional Narrative</h3>
-          <p>A <span class="key-term">non-fictional narrative</span> deals with real events, real people, and factual information. The author writes about actual occurrences and verifiable truths, though style and structure may vary greatly.</p>
-          <ul>
-            <li>Events are real and verifiable</li>
-            <li>Author is responsible for factual accuracy</li>
-            <li>Primary purpose: inform, argue, record, reflect</li>
-            <li>Forms: Essay, Biography, Autobiography, Travelogue, Memoir, Creative Non-fiction</li>
-          </ul>
-
-          <div class="examiner-tip">
-            <div class="label">🎯 Examiner Tip</div>
-            <p>Always state that the distinction is not always absolute — creative non-fiction and autofiction blur the boundary. Examiners reward nuanced answers.</p>
-          </div>
         </div>
 
-        <!-- ── 2. Fictional Forms ── -->
-        <div id="fictional-forms" class="note-section">
-          <h2>2. Key Forms of Fictional Prose Narrative</h2>
+        <div id="fictional-def" class="note-section">
+          <h2>1.2 Fictional Narrative: A Formal Definition</h2>
+          <p>A <span class="key-term">fictional narrative</span> is a prose composition in which the events, characters, and (frequently) the setting are products of the author's imagination. The defining criterion is not that fiction contains no truth — indeed, fiction often communicates psychological, moral, or social truths more powerfully than factual writing — but that its propositional content is not subject to a truth-claim in the way a newspaper report or a historical chronicle is. When Golding writes that a group of boys descend into savagery on an island, he is not asserting that this event occurred; he is constructing an imagined scenario through which a thesis about human nature can be explored.</p>
 
-          <h3>The Novel</h3>
-          <p>The <span class="key-term">novel</span> is the most prominent form of long prose fiction. It is typically over 40,000 words and features complex plots, developed characters, and sustained exploration of theme.</p>
+          <h3>1.2.1 Core Characteristics of Fiction</h3>
           <ul>
-            <li>Originated in the 18th century (Defoe, Richardson, Fielding)</li>
-            <li>Allows for psychological depth, multiple storylines, and social commentary</li>
-            <li>Examples in course: <em>Lord of the Flies</em> (Golding), <em>Moth Smoke</em> (Hamid)</li>
+            <li><strong>Invented content:</strong> Events, characters, and often settings are created rather than reported, even when inspired by real experience (a process literary theorists call "transmutation" of lived material into art).</li>
+            <li><strong>Suspension of disbelief:</strong> Coleridge's famous phrase describes the reader's willing acceptance of the fictional premise in exchange for imaginative and emotional engagement.</li>
+            <li><strong>Mimetic and didactic potential:</strong> Fiction can imitate (mimesis) lived experience while also instructing or revealing (didaxis) — Golding's allegory is simultaneously a gripping adventure narrative and a philosophical argument about innate evil.</li>
+            <li><strong>Authorial freedom:</strong> The author bears no obligation to factual accuracy, though internal consistency (a coherent "storyworld") is still expected.</li>
+            <li><strong>Aesthetic shaping:</strong> Events are selected, compressed, and arranged for artistic effect — what Aristotle called <em>plot</em> (mythos) as opposed to mere chronicle.</li>
           </ul>
 
-          <h3>The Short Story</h3>
-          <p>The <span class="key-term">short story</span> is a brief prose fiction, typically between 1,000 and 20,000 words, focused on a single event, character, or moment. Unlike the novel, it demands compression and precision.</p>
-          <ul>
-            <li>Single dominant effect (Poe's theory of "unity of effect")</li>
-            <li>Limited characters, compressed time, concentrated theme</li>
-            <li>Often ends with a twist or epiphany</li>
-            <li>Examples: "Story of an Hour," "The Necklace," "Araby," "The Fall of the House of Usher"</li>
-          </ul>
-
-          <h3>The Novella</h3>
-          <p>The <span class="key-term">novella</span> is intermediate in length (15,000–40,000 words) between the short story and novel. It has the compression of a short story but allows for deeper development than the short story permits.</p>
-          <ul>
-            <li>Examples: <em>Heart of Darkness</em> (Conrad), <em>The Metamorphosis</em> (Kafka)</li>
-          </ul>
-        </div>
-
-        <!-- ── 3. Elements ── -->
-        <div id="elements" class="note-section">
-          <h2>3. Key Concepts / Elements of Fictional Prose</h2>
+          <h3>1.2.2 The Forms Fiction Takes</h3>
+          <p>At the prose level — the level relevant to this course — fiction principally takes three forms, distinguished primarily by length and the corresponding scope of development they allow: the <strong>novel</strong>, the <strong>novella</strong>, and the <strong>short story</strong>. These are treated in full depth in Chapter 2. For now, note simply that length is not a trivial or merely quantitative distinction — it determines what kind of plot, characterization, and thematic complexity a text can sustain. A short story cannot develop a protagonist across decades the way a novel like <em>Moth Smoke</em> can; it must instead achieve what Poe called "unity of effect," a single concentrated impression achieved through economy.</p>
 
           <div class="highlight-box">
-            <div class="label">⭐ High-Yield — All Elements May Be Asked</div>
-            <p>Know definitions of all six elements with examples from prescribed texts.</p>
+            <div class="label">⭐ Examiner Favourite</div>
+            <p>"Define fictional narrative and explain its primary purpose" is one of the most consistently repeated short questions across FBISE, Punjab Board, and affiliated BISE papers. A complete answer must include: (1) the definition centred on invented content, (2) at least one named theorist or concept (Aristotle's mimesis, Coleridge's suspension of disbelief), and (3) the named forms (novel, novella, short story).</p>
           </div>
+        </div>
 
-          <h3>Plot Structure</h3>
-          <p><span class="key-term">Plot</span> is the sequence of events in a narrative. Freytag's Pyramid outlines: <strong>Exposition → Rising Action → Climax → Falling Action → Denouement (Resolution)</strong>.</p>
+        <div id="nonfictional-def" class="note-section">
+          <h2>1.3 Non-fictional Narrative: A Formal Definition</h2>
+          <p>A <span class="key-term">non-fictional narrative</span> is a prose composition that makes a truth-claim about real people, events, or ideas, and for which the author bears responsibility for factual accuracy. Non-fiction does not preclude artistry — indeed, the personal essay and the literary memoir are among the most stylistically refined forms in the English tradition — but it operates under what literary theorist Philippe Lejeune termed an <strong>"autobiographical pact"</strong> (or, more broadly, a referential pact): an implicit contract with the reader that what is described corresponds to an external reality.</p>
+
+          <h3>1.3.1 Core Characteristics of Non-fiction</h3>
           <ul>
-            <li><strong>Exposition:</strong> Background and introduction of characters/setting</li>
-            <li><strong>Rising Action:</strong> Conflict develops; tension builds</li>
-            <li><strong>Climax:</strong> Turning point — highest tension</li>
-            <li><strong>Falling Action:</strong> Consequences of climax unfold</li>
-            <li><strong>Denouement:</strong> Resolution — conflicts resolved (or not)</li>
+            <li><strong>Referentiality:</strong> Statements can, in principle, be checked against external reality, documentary evidence, or testimony.</li>
+            <li><strong>Authorial accountability:</strong> The writer is answerable for accuracy; deliberate fabrication presented as fact constitutes a breach of the genre's contract (and, in journalism, an ethical violation).</li>
+            <li><strong>Variable subjectivity:</strong> Non-fiction is not synonymous with objectivity. The personal essay (e.g. Orwell's "Shooting an Elephant") is deeply subjective in voice while remaining non-fictional in its referential claim.</li>
+            <li><strong>Reflective and argumentative purpose:</strong> Much non-fiction exists to inform, persuade, record, or reflect — purposes distinct from, though not always exclusive of, fiction's exploratory and aesthetic aims.</li>
           </ul>
 
-          <div class="diagram-wrap">
-            <div class="diagram-label">Diagram — Freytag's Pyramid (Plot Structure)</div>
-            <svg viewBox="0 0 680 290" role="img">
-              <title>Freytag's Pyramid showing the five stages of plot</title>
-              <desc>A mountain-shaped diagram rising from exposition through rising action to a climax peak, then descending through falling action to denouement, illustrating the tension curve of a narrative plot.</desc>
-
-              <line x1="50" y1="230" x2="630" y2="230" stroke="#D6D0C0" stroke-width="1"/>
-
-              <polyline points="50,210 220,210 340,60 460,210 630,210"
-                fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
-
-              <circle cx="50" cy="210" r="4" fill="#0D1B2A"/>
-              <circle cx="220" cy="210" r="4" fill="#0D1B2A"/>
-              <circle cx="340" cy="60" r="5" fill="#D4716A"/>
-              <circle cx="460" cy="210" r="4" fill="#0D1B2A"/>
-              <circle cx="630" cy="210" r="4" fill="#0D1B2A"/>
-
-              <text x="340" y="42" text-anchor="middle" font-size="13" font-weight="600" fill="#9B3A33">Climax</text>
-              <text x="340" y="252" text-anchor="middle" font-size="11" fill="#6B7280">Turning point — highest tension</text>
-
-              <text x="80" y="252" text-anchor="middle" font-size="13" font-weight="600" fill="#0D1B2A">Exposition</text>
-              <text x="80" y="268" text-anchor="middle" font-size="10.5" fill="#6B7280">Setup &amp; intro</text>
-
-              <text x="240" y="195" text-anchor="middle" font-size="13" font-weight="600" fill="#0D1B2A">Rising Action</text>
-              <text x="240" y="180" text-anchor="middle" font-size="10.5" fill="#6B7280">Conflict builds</text>
-
-              <text x="420" y="195" text-anchor="middle" font-size="13" font-weight="600" fill="#0D1B2A">Falling Action</text>
-              <text x="420" y="180" text-anchor="middle" font-size="10.5" fill="#6B7280">Consequences unfold</text>
-
-              <text x="600" y="252" text-anchor="middle" font-size="13" font-weight="600" fill="#0D1B2A">Denouement</text>
-              <text x="600" y="268" text-anchor="middle" font-size="10.5" fill="#6B7280">Resolution</text>
-            </svg>
-          </div>
-
-          <h3>Characters and Characterization</h3>
-          <p><span class="key-term">Characterization</span> is the method by which an author creates and develops characters. Two main methods:</p>
-          <ul>
-            <li><strong>Direct/Explicit:</strong> Author tells us directly about the character</li>
-            <li><strong>Indirect/Dramatic:</strong> Character revealed through actions, speech, thoughts, others' reactions</li>
-            <li><strong>Round characters:</strong> Complex, multi-dimensional (e.g., Daru in <em>Moth Smoke</em>)</li>
-            <li><strong>Flat characters:</strong> One-dimensional, type characters</li>
-            <li><strong>Dynamic:</strong> Change through the story; <strong>Static:</strong> Remain unchanged</li>
-          </ul>
-
-          <h3>Setting</h3>
-          <p><span class="key-term">Setting</span> refers to the time, place, and social environment of a narrative. It functions to create atmosphere, establish context, and reflect character psychology.</p>
-
-          <h3>Point of View (POV)</h3>
-          <p><span class="key-term">Point of View</span> is the narrative perspective from which the story is told.</p>
-          <ul>
-            <li><strong>First Person:</strong> Narrator is a character ("I") — subjective, limited knowledge. <em>E.g., Moth Smoke</em></li>
-            <li><strong>Second Person:</strong> "You" — rare, creates intimacy or implication</li>
-            <li><strong>Third Person Limited:</strong> Outside narrator focuses on one character's mind</li>
-            <li><strong>Third Person Omniscient:</strong> All-knowing narrator has access to all characters' thoughts and feelings. <em>E.g., Lord of the Flies</em></li>
-            <li><strong>Unreliable Narrator:</strong> A narrator whose credibility is compromised — creates dramatic irony</li>
-          </ul>
+          <h3>1.3.2 The Forms Non-fiction Takes</h3>
+          <p>This course identifies five principal forms of non-fictional narrative: the <strong>essay</strong> (in its personal, critical, and nature sub-types), <strong>biography and autobiography</strong>, the <strong>travelogue</strong>, the <strong>memoir</strong>, and <strong>creative non-fiction</strong>. These are explored fully in Chapter 5. Each form negotiates the balance between factual obligation and literary technique differently — the memoir, for instance, permits far more selective and impressionistic treatment of memory than a formal biography would.</p>
 
           <div class="examiner-tip">
             <div class="label">🎯 Examiner Tip</div>
-            <p>In <em>Moth Smoke</em>, multiple first-person narrators create an unreliable, fragmented perspective — always mention this in POV questions.</p>
+            <p>Do not define non-fiction as "writing without style" or "boring factual writing." University-level answers should explicitly state that non-fiction can be highly stylised and subjective (cite Orwell or Sontag) while still being non-fictional, because the defining criterion is the truth-claim, not the absence of craft.</p>
           </div>
-
-          <div class="diagram-wrap">
-            <div class="diagram-label">Diagram — Point of View Spectrum</div>
-            <svg viewBox="0 0 680 220" role="img">
-              <title>Spectrum of narrative point of view from first person to third person omniscient</title>
-              <desc>A horizontal spectrum showing four points of view ordered by narrative distance: first person (most subjective, closest to one character), second person, third person limited, and third person omniscient (most distant, knows all characters' minds), with course examples marked underneath.</desc>
-              <defs>
-                <marker id="arrowpov" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker>
-              </defs>
-
-              <line x1="60" y1="60" x2="620" y2="60" stroke="#C9A84C" stroke-width="2" marker-end="url(#arrowpov)"/>
-
-              <circle cx="90" cy="60" r="6" fill="#D4716A"/>
-              <circle cx="260" cy="60" r="6" fill="#0D1B2A"/>
-              <circle cx="430" cy="60" r="6" fill="#0D1B2A"/>
-              <circle cx="600" cy="60" r="6" fill="#5C7A5F"/>
-
-              <text x="90" y="95" text-anchor="middle" font-size="13" font-weight="600" fill="#0D1B2A">First Person</text>
-              <text x="90" y="112" text-anchor="middle" font-size="10.5" fill="#6B7280">"I" — subjective</text>
-              <text x="90" y="127" text-anchor="middle" font-size="10.5" fill="#9B3A33">Moth Smoke</text>
-
-              <text x="260" y="95" text-anchor="middle" font-size="13" font-weight="600" fill="#0D1B2A">Second Person</text>
-              <text x="260" y="112" text-anchor="middle" font-size="10.5" fill="#6B7280">"You" — rare, implicating</text>
-
-              <text x="430" y="95" text-anchor="middle" font-size="13" font-weight="600" fill="#0D1B2A">Third Limited</text>
-              <text x="430" y="112" text-anchor="middle" font-size="10.5" fill="#6B7280">Focus on one mind</text>
-
-              <text x="600" y="95" text-anchor="middle" font-size="13" font-weight="600" fill="#0D1B2A">Third Omniscient</text>
-              <text x="600" y="112" text-anchor="middle" font-size="10.5" fill="#6B7280">All-knowing narrator</text>
-              <text x="600" y="127" text-anchor="middle" font-size="10.5" fill="#2E5430">Lord of the Flies</text>
-
-              <text x="90" y="35" text-anchor="middle" font-size="10.5" fill="#9B3A33" font-weight="600">most subjective</text>
-              <text x="600" y="35" text-anchor="middle" font-size="10.5" fill="#2E5430" font-weight="600">most distant</text>
-
-              <rect x="40" y="160" width="600" height="42" rx="6" fill="#FAF7F0" stroke="#D4716A" stroke-width="0.5"/>
-              <text x="60" y="186" font-size="11.5" fill="#0D1B2A">An <tspan font-style="italic">unreliable narrator</tspan> can occur at any point — credibility, not position, is what's compromised.</text>
-            </svg>
-          </div>
-
-          <h3>Theme</h3>
-          <p><span class="key-term">Theme</span> is the central idea or underlying message of a literary work. It is not a moral but an insight about life, human nature, or society.</p>
-          <ul>
-            <li><em>Lord of the Flies</em>: Civilisation vs. Savagery; Loss of Innocence; Power</li>
-            <li><em>Moth Smoke</em>: Class inequality; Moral decay; Pakistan's identity crisis</li>
-            <li>"Story of an Hour": Freedom; Oppression; Marriage; Death as liberation</li>
-          </ul>
-
-          <h3>Style and Tone</h3>
-          <p><span class="key-term">Style</span> is the author's distinctive way of writing — including diction, sentence structure, imagery, and use of literary devices.</p>
-          <p><span class="key-term">Tone</span> is the author's attitude toward the subject matter, conveyed through language choices. It differs from <em>mood</em> (the emotional atmosphere felt by the reader).</p>
-          <ul>
-            <li>Orwell: Plain, direct, ironic tone</li>
-            <li>Poe: Gothic, atmospheric, tense tone</li>
-            <li>Chopin: Ironic, restrained, subversive tone</li>
-          </ul>
         </div>
 
-        <!-- ── 4. Novel Genres ── -->
-        <div id="novel-genres" class="note-section">
-          <h2>4. The Novel and Its Genres</h2>
+        <div id="distinctions" class="note-section">
+          <h2>1.4 Key Distinctions Between Fiction and Non-fiction</h2>
+          <p>The table below consolidates the major axes along which fictional and non-fictional narrative differ. Students should be able to reproduce at least four of these distinctions, with one supporting example each, for both short and long examination questions.</p>
 
-          <div class="highlight-box">
-            <div class="label">⭐ Examiner Favourite — Genre Definitions</div>
-            <p>Short questions on individual genres appear in nearly every paper. Memorise key features + one example for each.</p>
+          <table class="compare-table">
+            <tr><th>Criterion</th><th>Fictional Narrative</th><th>Non-fictional Narrative</th></tr>
+            <tr><td><strong>Truth-claim</strong></td><td>None — content is invented, though it may express deeper truths symbolically</td><td>Present — content corresponds to verifiable reality</td></tr>
+            <tr><td><strong>Authorial responsibility</strong></td><td>Internal consistency of the storyworld; no factual obligation</td><td>Accuracy and honesty toward source material and lived experience</td></tr>
+            <tr><td><strong>Primary purpose</strong></td><td>Aesthetic exploration, entertainment, symbolic insight into human experience</td><td>Information, argument, reflection, documentation</td></tr>
+            <tr><td><strong>Reader's contract</strong></td><td>"Suspension of disbelief" (Coleridge)</td><td>"Referential/autobiographical pact" (Lejeune)</td></tr>
+            <tr><td><strong>Characteristic forms</strong></td><td>Novel, novella, short story</td><td>Essay, biography, travelogue, memoir</td></tr>
+            <tr><td><strong>Typical POV use</strong></td><td>Flexible — first, third limited, omniscient, even unreliable</td><td>Predominantly first person (essay, memoir) or controlled third (biography)</td></tr>
+            <tr><td><strong>Relationship to time</strong></td><td>Author has total control — can compress, expand, or reorder freely</td><td>Constrained by the actual sequence of events, though selection and emphasis remain available</td></tr>
+          </table>
+
+          <div class="scholar-box">
+            <div class="label">Theoretical Note</div>
+            <p>Aristotle's distinction in the <em>Poetics</em> remains foundational: history narrates "what has happened," a record of the particular and contingent, while poetry (his term for imaginative literature) narrates "what may happen" according to probability or necessity — the universal. This is why Aristotle considered poetry "more philosophical" than history: fiction, freed from the obligation to report the merely actual, can construct situations that reveal general truths about human character and choice.</p>
           </div>
+        </div>
 
-          <div class="diagram-wrap scroll-x">
-            <div class="diagram-label">Mindmap — Genres of the Novel</div>
-            <svg viewBox="0 0 900 360" role="img">
-              <title>Mindmap of novel genres branching from a central node</title>
-              <desc>A mindmap with "The Novel" as the central node, branching into ten genres: epistolary, picaresque, bildungsroman, historical, novel of manners, gothic, realistic, modern, postmodern, and graphic novel, each with a one-line defining feature.</desc>
+        <div id="blurred" class="note-section" style="border-left-color: var(--rose)">
+          <h2>1.5 The Blurred Boundary: Creative Non-fiction and Autofiction</h2>
+          <p>A genuinely university-level treatment of this topic cannot stop at a clean binary. In contemporary literary practice, the line between fiction and non-fiction is frequently and deliberately destabilised. Two developments are particularly important for ENG-201 students to understand:</p>
 
-              <ellipse cx="450" cy="180" rx="78" ry="34" fill="#0D1B2A"/>
-              <text x="450" y="186" text-anchor="middle" font-size="14" font-weight="600" fill="#C9A84C">The Novel</text>
+          <h3>1.5.1 Creative Non-fiction</h3>
+          <p><strong>Creative non-fiction</strong> applies literary techniques — scene-setting, dialogue reconstruction, figurative language, narrative pacing — to factual material. Susan Sontag's <em>Illness as Metaphor</em>, studied in Chapter 8, is an instructive example: it is rigorously argumentative and grounded in real medical and cultural history, yet its prose deploys rhetorical and stylistic devices more commonly associated with literary fiction. The genre asks readers to accept literary shaping of fact without surrendering the underlying truth-claim.</p>
 
-              <g font-size="10.5" fill="#6B7280">
-                <line x1="450" y1="146" x2="120" y2="40" stroke="#D6D0C0" stroke-width="0.75"/>
-                <rect x="40" y="18" width="160" height="44" rx="6" fill="#FAF7F0" stroke="#C9A84C" stroke-width="0.5"/>
-                <text x="120" y="36" text-anchor="middle" font-size="12" font-weight="600" fill="#0D1B2A">Epistolary</text>
-                <text x="120" y="52" text-anchor="middle">Letters &amp; documents</text>
+          <h3>1.5.2 Autofiction</h3>
+          <p><strong>Autofiction</strong> (a term coined by French novelist Serge Doubrovsky in 1977) names texts that blend autobiographical material with fictional invention, often using the author's own name for a protagonist whose experiences nonetheless diverge from documented fact. Such texts deliberately frustrate Lejeune's "autobiographical pact," forcing readers to hold both registers — fiction and non-fiction — simultaneously.</p>
 
-                <line x1="450" y1="150" x2="320" y2="20" stroke="#D6D0C0" stroke-width="0.75"/>
-                <rect x="240" y="18" width="160" height="44" rx="6" fill="#FAF7F0" stroke="#C9A84C" stroke-width="0.5"/>
-                <text x="320" y="36" text-anchor="middle" font-size="12" font-weight="600" fill="#0D1B2A">Picaresque</text>
-                <text x="320" y="52" text-anchor="middle">Roguish hero, episodic</text>
-
-                <line x1="450" y1="146" x2="580" y2="20" stroke="#D6D0C0" stroke-width="0.75"/>
-                <rect x="500" y="18" width="160" height="44" rx="6" fill="#FAF7F0" stroke="#C9A84C" stroke-width="0.5"/>
-                <text x="580" y="36" text-anchor="middle" font-size="12" font-weight="600" fill="#0D1B2A">Bildungsroman</text>
-                <text x="580" y="52" text-anchor="middle">Coming-of-age growth</text>
-
-                <line x1="450" y1="146" x2="780" y2="40" stroke="#D6D0C0" stroke-width="0.75"/>
-                <rect x="700" y="18" width="160" height="44" rx="6" fill="#FAF7F0" stroke="#C9A84C" stroke-width="0.5"/>
-                <text x="780" y="36" text-anchor="middle" font-size="12" font-weight="600" fill="#0D1B2A">Historical</text>
-                <text x="780" y="52" text-anchor="middle">Set in a past period</text>
-
-                <line x1="450" y1="160" x2="90" y2="160" stroke="#D6D0C0" stroke-width="0.75"/>
-                <rect x="10" y="138" width="160" height="44" rx="6" fill="#FAF7F0" stroke="#C9A84C" stroke-width="0.5"/>
-                <text x="90" y="156" text-anchor="middle" font-size="12" font-weight="600" fill="#0D1B2A">Novel of Manners</text>
-                <text x="90" y="172" text-anchor="middle">Satirises social class</text>
-
-                <line x1="450" y1="200" x2="90" y2="200" stroke="#D6D0C0" stroke-width="0.75"/>
-                <rect x="10" y="198" width="160" height="44" rx="6" fill="#FAF7F0" stroke="#C9A84C" stroke-width="0.5"/>
-                <text x="90" y="216" text-anchor="middle" font-size="12" font-weight="600" fill="#0D1B2A">Gothic</text>
-                <text x="90" y="232" text-anchor="middle">Horror &amp; supernatural</text>
-
-                <line x1="450" y1="214" x2="780" y2="160" stroke="#D6D0C0" stroke-width="0.75"/>
-                <rect x="700" y="138" width="160" height="44" rx="6" fill="#FAF7F0" stroke="#C9A84C" stroke-width="0.5"/>
-                <text x="780" y="156" text-anchor="middle" font-size="12" font-weight="600" fill="#0D1B2A">Realistic</text>
-                <text x="780" y="172" text-anchor="middle">Ordinary life truthfully</text>
-
-                <line x1="450" y1="214" x2="780" y2="220" stroke="#D6D0C0" stroke-width="0.75"/>
-                <rect x="700" y="198" width="160" height="44" rx="6" fill="#FAF7F0" stroke="#C9A84C" stroke-width="0.5"/>
-                <text x="780" y="216" text-anchor="middle" font-size="12" font-weight="600" fill="#0D1B2A">Modern</text>
-                <text x="780" y="232" text-anchor="middle">Experimental form</text>
-
-                <line x1="450" y1="214" x2="320" y2="340" stroke="#D6D0C0" stroke-width="0.75"/>
-                <rect x="240" y="298" width="160" height="44" rx="6" fill="#FAEFEE" stroke="#D4716A" stroke-width="0.5"/>
-                <text x="320" y="316" text-anchor="middle" font-size="12" font-weight="600" fill="#9B3A33">Postmodern</text>
-                <text x="320" y="332" text-anchor="middle" fill="#9B3A33">Moth Smoke — fragmented</text>
-
-                <line x1="450" y1="214" x2="580" y2="340" stroke="#D6D0C0" stroke-width="0.75"/>
-                <rect x="500" y="298" width="160" height="44" rx="6" fill="#FAF7F0" stroke="#C9A84C" stroke-width="0.5"/>
-                <text x="580" y="316" text-anchor="middle" font-size="12" font-weight="600" fill="#0D1B2A">Graphic Novel</text>
-                <text x="580" y="332" text-anchor="middle">Sequential art + text</text>
-              </g>
-            </svg>
-          </div>
-
-          <h3>Epistolary Novel</h3>
-          <p>Told entirely through letters, diary entries, or documents. Gives a sense of immediacy and authenticity. <em>Example: Pamela</em> (Richardson), <em>Frankenstein</em> (Shelley)</p>
-
-          <h3>The Picaresque Novel</h3>
-          <p>Follows a roguish hero (picaro) on episodic adventures across social classes. Satirises society. Origin: Spanish tradition. <em>Example: Tom Jones</em> (Fielding)</p>
-
-          <h3>Coming-of-Age / Bildungsroman</h3>
-          <p>Traces the psychological and moral growth of a protagonist from youth to maturity. <span class="key-term">Bildungsroman</span> = German for "novel of formation." <em>Example: Great Expectations</em> (Dickens), <em>Jane Eyre</em> (Brontë)</p>
-
-          <h3>The Historical Novel</h3>
-          <p>Set in a specific historical period; recreates past events and social conditions with fictional characters. <em>Example: A Tale of Two Cities</em> (Dickens)</p>
-
-          <h3>The Novel of Manners</h3>
-          <p>Focuses on the customs, values, and behaviours of a particular social class. Often satirical. <em>Example: Pride and Prejudice</em> (Austen)</p>
-
-          <h3>The Gothic Novel</h3>
-          <p>Combines horror, mystery, and supernatural elements with psychological terror. Dark settings, brooding atmosphere. <em>Example: The Fall of the House of Usher</em> (Poe) — also a Gothic short story.</p>
-
-          <h3>The Realistic Novel</h3>
-          <p>Represents ordinary life and society truthfully, without idealisation or romanticism. <em>Example: Middlemarch</em> (Eliot)</p>
-
-          <h3>Modern Novel</h3>
-          <p>Post-1900 fiction that experiments with narrative structure, stream of consciousness, and fragmented time. <em>Example: Mrs Dalloway</em> (Woolf), <em>Ulysses</em> (Joyce)</p>
-
-          <h3>Postmodern Novel</h3>
-          <p>Self-referential, metafictional, challenges the idea of a stable narrative or truth. Uses irony, intertextuality, and fragmentation. <em>Example: Moth Smoke</em> (Hamid), <em>Slaughterhouse-Five</em> (Vonnegut)</p>
-
-          <h3>Graphic Novel</h3>
-          <p>A narrative told through sequential art/comics, treated as serious literary fiction. <em>Example: Maus</em> (Spiegelman), <em>Persepolis</em> (Satrapi)</p>
-
-          <h3>Other Forms</h3>
-          <p>Detective, Mystery, Thriller, Fantasy, Dystopian Fiction, Science Fiction — each defined by genre conventions and reader expectations.</p>
+          <h3>1.5.3 Implications for This Course</h3>
+          <p>Even the novels studied in this course are not free of this tension. Mohsin Hamid's <em>Moth Smoke</em> (Chapter 6), though formally a novel, is set against precisely dated real historical events — Pakistan's nuclear tests of May 1998 — and depicts social and economic conditions in Lahore with documentary specificity. This grounding in verifiable history does not make the novel non-fictional (Daru, Ozi, and Mumtaz remain invented characters), but it illustrates how fictional narrative routinely borrows the authority and texture of the real. A strong answer in long-question format should be able to discuss this kind of border case.</p>
 
           <div class="examiner-tip">
             <div class="label">🎯 Examiner Tip</div>
-            <p><em>Moth Smoke</em> can be discussed as a <strong>postmodern, multi-voiced novel with noir detective elements</strong> — use this multi-genre reading in long answers for full marks.</p>
+            <p>For 10-mark questions asking you to "discuss the distinction" or "evaluate whether the fiction/non-fiction binary is absolute," always devote your final paragraph to this blurred boundary. Examiners at the university level specifically reward students who move beyond a simple two-column definition and demonstrate awareness of contested or hybrid cases.</p>
           </div>
         </div>
 
-        <!-- ── 5. Non-fiction ── -->
-        <div id="nonfiction" class="note-section">
-          <h2>5. Key Forms of Non-fictional Narrative</h2>
+        <div id="why-matters" class="note-section">
+          <h2>1.6 Why This Distinction Matters for Literary Study</h2>
+          <p>Beyond the examination hall, this distinction governs how we read. When we open a non-fictional essay such as Mill's "On Liberty," we evaluate its claims as we would any argument — for logical coherence, evidentiary support, and persuasive force. When we open a fictional novel such as <em>Lord of the Flies</em>, we do not ask "did this literally happen?" but rather "what does this invented scenario reveal about civilisation, power, and human nature?" The interpretive questions we bring to a text are conditioned by which side of the fiction/non-fiction divide it occupies.</p>
+          <p>This is also why genre misclassification is a serious critical error. Reading a memoir as though it were straightforward, unmediated fact ignores the selective and constructed nature of memory; reading a postmodern novel like <em>Moth Smoke</em> as though its multiple narrators were simply unreliable witnesses to be cross-examined for "the truth" misses the novel's deliberate point — that in a corrupt social system, truth itself becomes a contested, class-inflected commodity.</p>
+        </div>
 
-          <h3>The Essay</h3>
-          <p>A short piece of non-fiction that explores a topic from the writer's personal perspective. Three types required:</p>
+        <div id="summary" class="note-section" style="border-left-color: var(--sage)">
+          <h2>1.7 Chapter Summary</h2>
           <ul>
-            <li><strong>Personal Essay:</strong> Reflective, first-person, informal — explores the author's own experiences (e.g., Orwell)</li>
-            <li><strong>Critical Essay:</strong> Analytical, evaluates a work of art or literature</li>
-            <li><strong>Nature Essay:</strong> Focuses on natural world, often combines observation with reflection</li>
+            <li>Fictional narrative is defined by invented content and the absence of a truth-claim; its purpose is aesthetic, exploratory, and often symbolically truthful despite being factually invented.</li>
+            <li>Non-fictional narrative is defined by a referential truth-claim and authorial accountability to fact; it can nonetheless be highly stylised and subjective.</li>
+            <li>Aristotle's <em>Poetics</em> provides the foundational theoretical distinction: history (the particular, the actual) versus poetry (the universal, the possible).</li>
+            <li>Coleridge's "suspension of disbelief" and Lejeune's "autobiographical/referential pact" describe the differing contracts each mode makes with the reader.</li>
+            <li>The boundary is not absolute: creative non-fiction and autofiction deliberately blend the two modes, and even canonical novels (e.g. <em>Moth Smoke</em>) borrow heavily from documented historical reality.</li>
+            <li>This foundational distinction shapes how every subsequent concept in ENG-201 — POV, characterization, theme, genre — should be analysed.</li>
           </ul>
-
-          <h3>Biography &amp; Autobiography</h3>
-          <p><span class="key-term">Biography</span>: A factual account of a person's life written by someone else.<br>
-          <span class="key-term">Autobiography</span>: The author writes about their own life — a first-person narrative of self.</p>
-
-          <h3>Travelogue</h3>
-          <p>A narrative account of a journey. Combines observation, personal reflection, cultural commentary, and descriptive writing.</p>
-
-          <h3>Memoir</h3>
-          <p>A first-person account focused on a specific period or theme from the author's life — more selective and thematic than full autobiography.</p>
-
-          <h3>Creative Non-fiction</h3>
-          <p>Uses literary techniques (imagery, metaphor, narrative structure) in factual writing. Blurs the boundary between fiction and non-fiction.</p>
         </div>
 
-        <!-- ═══ SECTION II ═══ -->
-        <div id="sec2" class="note-section" style="border-left-color: var(--rose)">
-          <p class="section-label">Section II</p>
-          <h2>Theory into Action — Prescribed Texts</h2>
-          <p>Section II applies theoretical concepts to close reading of selected texts. Below are essential notes on all prescribed texts.</p>
+        <div class="chapter-nav">
+          <span class="disabled">← Previous Chapter</span>
+          <a href="chapter2.html">Chapter 2: Forms of Fictional Prose →</a>
         </div>
 
-        <!-- ── 6. Novels ── -->
-        <div id="novels" class="note-section">
-          <h2>6. Novels</h2>
-
-          <h3>Lord of the Flies — William Golding (1954)</h3>
-          <div class="highlight-box">
-            <div class="label">⭐ Most Important Novel — Always in Exam</div>
-          </div>
-          <p><strong>Summary:</strong> A group of British schoolboys are stranded on an uninhabited island after their plane is shot down. They attempt to govern themselves but descend into savagery and violence.</p>
-          <p><strong>Key Characters:</strong></p>
-          <ul>
-            <li><strong>Ralph:</strong> Protagonist; represents civilisation, democracy, order</li>
-            <li><strong>Jack:</strong> Antagonist; represents savagery, desire for power, instinct</li>
-            <li><strong>Piggy:</strong> Reason, intellect, scientific thinking; marginalised</li>
-            <li><strong>Simon:</strong> Spiritual insight, natural goodness; Christ-like figure</li>
-            <li><strong>Roger:</strong> Pure sadism; cruelty without restraint</li>
-            <li><strong>The Beast:</strong> Symbol of innate human evil and fear</li>
-          </ul>
-          <p><strong>Themes:</strong> Civilisation vs. Savagery · Loss of Innocence · Power &amp; Democracy vs. Tyranny · Human Evil · The Failure of Reason</p>
-          <p><strong>Symbolism:</strong></p>
-          <ul>
-            <li><strong>Conch shell:</strong> Democratic order, legitimate authority</li>
-            <li><strong>The Beast:</strong> Innate human evil (Simon's revelation: "the beast is us")</li>
-            <li><strong>Piggy's glasses:</strong> Reason and intellectual vision</li>
-            <li><strong>Fire:</strong> Civilisation and hope (or destruction)</li>
-            <li><strong>Lord of the Flies (pig's head):</strong> Beelzebub / Devil — pure evil</li>
-          </ul>
-          <p><strong>POV:</strong> Third person omniscient — Golding controls irony and the reader's moral judgement.</p>
-          <div class="examiner-tip">
-            <div class="label">🎯 Examiner Tip</div>
-            <p>Golding said he wrote the novel as a response to <em>Coral Island</em> by R.M. Ballantyne, which depicted boys as naturally good. Always mention this allegorical context for full marks.</p>
-          </div>
-
-          <h3 class="mt-3">Moth Smoke — Mohsin Hamid (2000)</h3>
-          <p><strong>Summary:</strong> Daru Shezad, a banker in Lahore who loses his job, descends into drugs, poverty, and criminality while conducting an affair with his best friend Ozi's wife, Mumtaz. Set against 1998 Pakistan's nuclear tests and elite corruption.</p>
-          <p><strong>Key Characters:</strong></p>
-          <ul>
-            <li><strong>Daru:</strong> Protagonist; moral ambiguity, self-destruction</li>
-            <li><strong>Ozi:</strong> The privileged elite; corruption through immunity</li>
-            <li><strong>Mumtaz:</strong> Trapped between two worlds; agency and desire</li>
-            <li><strong>Murad Badshah:</strong> Entrepreneur of crime; social commentary</li>
-          </ul>
-          <p><strong>Themes:</strong> Class inequality · Moral decay · Postcolonial identity · Love &amp; Betrayal · Pakistan's nuclear-age identity crisis</p>
-          <p><strong>Structure:</strong> Multi-voiced, postmodern — different narrators give conflicting testimonies (Daru's trial frames the novel). Unreliable narration throughout.</p>
-          <p><strong>Title Symbolism:</strong> The moth drawn to the flame of the elite lifestyle is destroyed by it — Daru is the moth; the world of wealth is the lethal flame.</p>
-        </div>
-
-        <!-- ── 7. Short Stories ── -->
-        <div id="stories" class="note-section">
-          <h2>7. Short Stories</h2>
-
-          <h3>"Story of an Hour" — Kate Chopin (1894)</h3>
-          <p><strong>Plot:</strong> Louise Mallard, a woman with a heart condition, is told her husband Brently has died in a train accident. Alone in her room, she experiences not grief but a profound sense of freedom. When Brently walks through the door unharmed, she dies — the doctor says of "joy that kills," but the irony suggests it is the death of her newly discovered freedom.</p>
-          <p><strong>Themes:</strong> Freedom &amp; Oppression · The Institution of Marriage · Female Independence · Irony of Death</p>
-          <p><strong>Key Technique:</strong> Dramatic irony — the reader understands Louise's joy is liberation, not grief; society misreads it entirely.</p>
-          <div class="examiner-tip">
-            <div class="label">🎯 Examiner Tip</div>
-            <p>Always discuss Chopin as a proto-feminist writer and the social context of 1890s America — this earns extra marks in analysis questions.</p>
-          </div>
-
-          <h3 class="mt-3">"The Fall of the House of Usher" — Edgar Allan Poe (1839)</h3>
-          <p><strong>Plot:</strong> The unnamed narrator visits his childhood friend Roderick Usher at his crumbling mansion. Roderick's twin sister Madeline, who suffers from catalepsy, is entombed alive. She returns from the vault and falls on Roderick, both dying together as the house collapses.</p>
-          <p><strong>Themes:</strong> Gothic horror · Psychological deterioration · Death &amp; Decay · Incest (implied) · The supernatural vs. psychological</p>
-          <p><strong>Gothic Elements:</strong> Decaying mansion, mysterious illness, premature burial, atmospheric dread, unreliable narrator, supernatural coincidence.</p>
-          <p><strong>Symbolism:</strong> The house = Roderick's mind (both crack and collapse simultaneously).</p>
-
-          <h3 class="mt-3">"The Necklace" — Guy de Maupassant (1884)</h3>
-          <p><strong>Plot:</strong> Mathilde Loisel, a middle-class woman obsessed with wealth, borrows a diamond necklace for a ball, loses it, and spends 10 years in poverty to replace it — only to discover the original was fake.</p>
-          <p><strong>Themes:</strong> Vanity &amp; Pride · Social class · Fate &amp; Irony · The cost of deception</p>
-          <p><strong>Key Technique:</strong> Situational irony — the twist at the end reframes the entire story.</p>
-
-          <h3 class="mt-3">"Cat in the Rain" — Ernest Hemingway (1925)</h3>
-          <p><strong>Plot:</strong> An American couple in an Italian hotel. The wife sees a cat sheltering from the rain and wants to rescue it; her husband remains indifferent. A hotel owner sends her a cat — possibly not the same one.</p>
-          <p><strong>Themes:</strong> Marital alienation · Female desire for nurturing and identity · Isolation in a foreign place</p>
-          <p><strong>Iceberg Theory:</strong> Hemingway never states the wife's dissatisfaction directly — the cat symbolises her unmet emotional needs, desire for home, and feminine identity.</p>
-
-          <h3 class="mt-3">"Araby" — James Joyce (1914)</h3>
-          <p><strong>Plot:</strong> A young Dublin boy becomes infatuated with his friend's sister. He promises to bring her something from the Araby bazaar. He arrives late; the bazaar is almost closed and cheap. He experiences a moment of devastating self-realisation.</p>
-          <p><strong>Themes:</strong> Loss of innocence · Disillusionment · The gap between romantic fantasy and reality · Colonised Dublin</p>
-          <p><strong>Epiphany:</strong> Joyce's concept — a sudden moment of spiritual or psychological revelation. The boy's epiphany is recognising his own vanity and the falseness of his romantic idealisation.</p>
-        </div>
-
-        <!-- ── 8. Essays ── -->
-        <div id="essays" class="note-section">
-          <h2>8. Essays</h2>
-
-          <h3>"Of Marriage and Single Life" — Francis Bacon (c.1612)</h3>
-          <p><strong>Type:</strong> Formal/Philosophical Essay. Bacon weighs the advantages and disadvantages of married vs single life for men of public affairs.</p>
-          <p><strong>Key Ideas:</strong> Married men are better citizens but less free for great enterprise; single men are better friends and servants; the wife and children become "hostages to fortune."</p>
-          <p><strong>Style:</strong> Aphoristic, dense, Latin-influenced. Short, epigrammatic sentences. No personal revelation — purely argumentative.</p>
-
-          <h3 class="mt-3">"A Free Man's Worship" — Bertrand Russell (1903)</h3>
-          <p><strong>Type:</strong> Philosophical Essay. Russell argues that in a universe indifferent to human values (materialist worldview), human beings must create their own meaning through the "worship" of goodness, beauty, and truth.</p>
-          <p><strong>Key Ideas:</strong> Universe has no inherent purpose; human dignity comes from refusing to worship power; freedom lies in embracing what is genuinely good despite knowing it is temporary.</p>
-
-          <h3 class="mt-3">"Shooting an Elephant" — George Orwell (1936)</h3>
-          <div class="highlight-box">
-            <div class="label">⭐ Most Important Essay — Frequently Examined</div>
-          </div>
-          <p><strong>Type:</strong> Personal/Political Essay. Orwell, a British police officer in Burma, is pressured by the local crowd to shoot a working elephant that has gone rogue. He shoots it despite knowing it is wrong — to avoid appearing weak before the colonised population.</p>
-          <p><strong>Themes:</strong> Imperialism · Loss of moral agency · The psychology of power · Hypocrisy of colonialism · The oppressor also oppressed</p>
-          <p><strong>Key Argument:</strong> The colonial officer becomes a puppet of the very people he oppresses — he must act against his conscience to maintain the illusion of authority. "When the white man turns tyrant it is his own freedom that he destroys."</p>
-          <p><strong>Style:</strong> Plain, direct, vivid, deeply self-critical. First-person confession mode.</p>
-
-          <h3 class="mt-3">"On Liberty" (Chapter 1) — John Stuart Mill (1859)</h3>
-          <p><strong>Type:</strong> Political Philosophy Essay. Mill argues for individual liberty against social tyranny. The <strong>harm principle</strong>: the only justification for restricting individual freedom is to prevent harm to others.</p>
-          <p><strong>Key Ideas:</strong> Tyranny of the majority is as dangerous as tyranny of government; freedom of thought and expression are essential; individuality must be protected.</p>
-
-          <h3 class="mt-3">"Illness as Metaphor" (Chapter 9) — Susan Sontag (1978)</h3>
-          <p><strong>Type:</strong> Critical/Cultural Essay. Sontag argues that society uses illness (particularly TB and cancer) as metaphors that stigmatise patients and distort thinking about disease.</p>
-          <p><strong>Key Argument:</strong> Illness should be seen as a purely physical phenomenon, not a reflection of character or moral failure. Metaphors of "battle," "invasion," and "defeat" are harmful to patients.</p>
-          <div class="examiner-tip">
-            <div class="label">🎯 Examiner Tip</div>
-            <p>Sontag's essay is unique — it critiques how language shapes perception of illness. Link her argument to structuralism/post-structuralism if possible for a high-scoring answer.</p>
-          </div>
-        </div>
-
-      </main><!-- /main -->
-    </div><!-- /layout-sidebar -->
+      </main>
+    </div>
   </div>
 </div>
 
 <footer class="site-footer">
-  <strong>ENG-201 Study Portal</strong> · Introduction to Fictional &amp; Non-fictional Narrative · BS English Semester III
+  <strong>ENG-201 Study Portal</strong> · Chapter 1 of 8 · Fictional &amp; Non-fictional Narrative
 </footer>
 
 <script src="../js/main.js"></script>
